@@ -7,6 +7,8 @@ technical note-taking.
 
 Configuration
 -------------
+* If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
+  [vim-peekaboo](http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git) there.
 * Configure the `g:peekaboo_template_dir` within the `~/.vimrc` file like in the
   example below:
     ```
@@ -30,7 +32,9 @@ Configuration
 
 Usage
 -----
-* Pressing `<leader>lmt` in normal mode will generate the standard MOM templates
-  below the cursor's current position.
+* Pressing `<leader>tt` either in Normal or Insert modes will print the text
+  `YYYY/MM/DD.$USER`
+* Pressing `<leader>lmt` in normal mode will generate the standard MOM template
+  at the current cursor position.
 * Pressing `<leader>td` either in Normal or Insert modes will print day and date
   like so: Sat Nov 18, 2023.

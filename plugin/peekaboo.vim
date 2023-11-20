@@ -19,7 +19,7 @@ endif
 " Remove FoxPro-generated text in diff mode so that VimDiff will only diff
 " actual lines of code written by programmers.
 function! s:PeekabooRemoveGeneratedCode()
-    call PeekabooLogger("Calling PeekabooRemoveGeneratedCode()")
+    call peekaboo#log("Calling PeekabooRemoveGeneratedCode()")
     if matchstr(getline(1), '^\*       Ö') ==  '*       Ö'
         set ft=foxpro
         let isFoxGCode = 1
@@ -27,15 +27,15 @@ function! s:PeekabooRemoveGeneratedCode()
         let isFoxGCode = 0
     endif
     if &diff && isFoxGCode && !exists('b:cleaned')
-        call PeekabooLogger("Cleaning garbage in [" .. bufname() .. "]")
+        call peekaboo#log("Cleaning garbage in [" .. bufname() .. "]")
         silent! set modifiable|set bt=
         silent! 1,18d
         silent! g/_[0-9,a-z,A-Z]\{9\}/d
         silent! g/^\*.*From\ Screen:/d
         silent! set nomodifiable|set bt=nofile|let b:cleaned = 1
-        call PeekabooLogger("PeekabooRemoveGeneratedCode() condition matches:Garbage removed.")
+        call peekaboo#log("PeekabooRemoveGeneratedCode() condition matches:Garbage removed.")
     else
-        call PeekabooLogger("PeekabooRemoveGeneratedCode() condition unmatch:Does nothing.")
+        call peekaboo#log("PeekabooRemoveGeneratedCode() condition unmatch:Does nothing.")
     endif
 endfunction
 
@@ -61,10 +61,10 @@ endfunction
 " placeholders to ease the process of replacing each placeholder with built-in
 " Vim motions.
 function! s:PeekabooGenerateMOMTemplate()
-    exec 'normal! ma'
     exec 'r ' . g:peekaboo_template_dir . 'mom.wiki'
+    exec '0,0 d _'
     "Mark the MOM's subject placeholder to registry a.
-    exec "normal! 'a0jjwma"
+    exec "normal! wma"
     "Mark the MOM tag name placeholder to registry b.
     exec 'normal! j0fTmb'
     "Mark the Date, time, & venue placeholder to registry c.
@@ -77,6 +77,8 @@ function! s:PeekabooGenerateMOMTemplate()
     exec 'normal! 4j0f[mf'
     "Mark the Acknowledgment & Comments placeholder to registry g.
     exec 'normal! 4j0f[mg'
+    "Jump to the marker a
+    exec 'normal! `a'
 endfunction
 
 augroup peekabooAutoLoadTemplates
@@ -115,5 +117,11 @@ nmap <silent> <unique> <Plug>PeekabooNPrintTheStdDateTime "=strftime("%a %b %d, 
 
 imap <silent> <unique> <leader>td <Plug>PeekabooIPrintTheStdDateTime
 imap <silent> <unique> <Plug>PeekabooIPrintTheStdDateTime <C-R>=strftime("%a %b %d, %Y")<CR>
+
+nmap <silent> <unique> <leader>tt <Plug>PeekabooNPrintYMD
+nmap <silent> <unique> <Plug>PeekabooNPrintYMD "=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>P
+
+imap <silent> <unique> <leader>tt <Plug>PeekabooIPrintYMD
+imap <silent> <unique> <Plug>PeekabooIPrintYMD <C-R>=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>
 
 command! PeekabooGenerateMOMTemplate call s:PeekabooGenerateMOMTemplate()
