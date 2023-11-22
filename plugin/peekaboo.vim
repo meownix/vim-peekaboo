@@ -112,16 +112,9 @@ augroup PeekabooVimrcAuGroup
                 \ set foldexpr=s:PeekabooVimwikiFoldLevelCustom(v:lnum)
 augroup END
 
-nmap <silent> <unique> <leader>td <Plug>PeekabooNPrintTheStdDateTime
-nmap <silent> <unique> <Plug>PeekabooNPrintTheStdDateTime "=strftime("%a %b %d, %Y")<CR>P
-
-imap <silent> <unique> <leader>td <Plug>PeekabooIPrintTheStdDateTime
-imap <silent> <unique> <Plug>PeekabooIPrintTheStdDateTime <C-R>=strftime("%a %b %d, %Y")<CR>
-
-nmap <silent> <unique> <leader>tt <Plug>PeekabooNPrintYMD
-nmap <silent> <unique> <Plug>PeekabooNPrintYMD "=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>P
-
-imap <silent> <unique> <leader>tt <Plug>PeekabooIPrintYMD
-imap <silent> <unique> <Plug>PeekabooIPrintYMD <C-R>=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>
+nnoremap <silent> <leader>td "=strftime("%a %b %d, %Y")<CR>P
+inoremap <silent> <leader>td <C-R>=strftime("%a %b %d, %Y")<CR>
+nnoremap <silent> <leader>tt "=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>P
+inoremap <silent> <leader>tt <C-R>=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>
 
 command! PeekabooGenerateMOMTemplate call s:PeekabooGenerateMOMTemplate()
