@@ -27,14 +27,16 @@ Configuration
 * The `mom.wiki` template file must already exist within Peekaboo's template
   directory. If you have pulled the latest MWiki repository, that template file
   should already exist.
-* Define `nnoremap <silent> <leader>lmt :PeekabooGenerateMOMTemplate<cr>` in the
-  `~/.vimrc` file.
 
 Usage
 -----
 * Pressing `<leader>tt` either in Normal or Insert modes will print the text
   `YYYY/MM/DD.$USER`
-* Pressing `<leader>lmt` in normal mode will generate the standard MOM template
+* Pressing `<leader>td` in either Normal or Insert mode will print the day and
+  date as follows: Sat Nov 18, 2023.
+* Pressing `<leader>nd` in either Normal or Insert mode will prompt for the next
+  working day's date. Users are free to enter any date they wish, and it will
+  print the day and date for the entered date with the same format as the
+  `<leader>td` keybinding mentioned above.
+* Pressing `<leader>ga` in normal mode will generate the standard MOM template
   at the current cursor position.
-* Pressing `<leader>td` either in Normal or Insert modes will print day and date
-  like so: Sat Nov 18, 2023.

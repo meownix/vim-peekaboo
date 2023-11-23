@@ -57,30 +57,6 @@ function! s:PeekabooGenerateNewVwkDiaryFileTitle()
     endif
 endfunction
 
-" Append the standardized MOM template to the current buffer and mark defined
-" placeholders to ease the process of replacing each placeholder with built-in
-" Vim motions.
-function! s:PeekabooGenerateMOMTemplate()
-    exec 'r ' . g:peekaboo_template_dir . 'mom.wiki'
-    exec '0,0 d _'
-    "Mark the MOM's subject placeholder to registry a.
-    exec "normal! wma"
-    "Mark the MOM tag name placeholder to registry b.
-    exec 'normal! j0fTmb'
-    "Mark the Date, time, & venue placeholder to registry c.
-    exec 'normal! 4j0wmc'
-    "Mark the 1st participant's name placeholder to registry d.
-    exec 'normal! 4j02f[md'
-    "Mark the 1st agenda point placeholder to registry e.
-    exec 'normal! 4j0f[me'
-    "Mark the 1st MOM point placeholder to registry f.
-    exec 'normal! 4j0f[mf'
-    "Mark the Acknowledgment & Comments placeholder to registry g.
-    exec 'normal! 4j0f[mg'
-    "Jump to the marker a
-    exec 'normal! `a'
-endfunction
-
 augroup peekabooAutoLoadTemplates
     au!
     autocmd BufNewFile *.html 0r ~/.vim/templates/page.html
@@ -112,9 +88,15 @@ augroup PeekabooVimrcAuGroup
                 \ set foldexpr=s:PeekabooVimwikiFoldLevelCustom(v:lnum)
 augroup END
 
-nnoremap <silent> <leader>td "=strftime("%a %b %d, %Y")<CR>P
-inoremap <silent> <leader>td <C-R>=strftime("%a %b %d, %Y")<CR>
+nnoremap <silent> <leader>td "=peekaboo#printStdDateOfToday()<CR>p
+inoremap <silent> <leader>td <C-R>=peekaboo#printStdDateOfToday()<CR>
+
+nnoremap <silent> <leader>nd "=peekaboo#printStdDateOfSpecificDate()<CR>p
+inoremap <silent> <leader>nd <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
+
 nnoremap <silent> <leader>tt "=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>P
 inoremap <silent> <leader>tt <C-R>=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>
 
-command! PeekabooGenerateMOMTemplate call s:PeekabooGenerateMOMTemplate()
+nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
+
+command! PeekabooGenerateMOMTemplate call peekaboo#GenerateMOMTemplate()
