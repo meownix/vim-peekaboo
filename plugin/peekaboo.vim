@@ -12,9 +12,7 @@ endif
 
 let g:peekaboo_loaded = 1
 
-if !exists("g:peekaboo_template_dir")
-    let g:peekaboo_template_dir = expand('%:h') . '/../../templates/'
-endif
+let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/templates/'
 
 " Remove FoxPro-generated text in diff mode so that VimDiff will only diff
 " actual lines of code written by programmers.
@@ -59,12 +57,13 @@ endfunction
 
 augroup peekabooAutoLoadTemplates
     au!
-    autocmd BufNewFile *.html 0r ~/.vim/templates/page.html
-    autocmd BufNewFile *.sh 0r ~/.vim/templates/script.sh
-    autocmd BufNewFile *.zsh 0r ~/.vim/templates/script.zsh
-    autocmd BufNewFile *.sop.tex 0r ~/.vim/templates/latex.sop.tex
-    autocmd BufNewFile *.soi.tex 0r ~/.vim/templates/latex.soi.tex
-    autocmd BufNewFile *.mom.tex 0r ~/.vim/templates/latex.mom.tex
+    autocmd BufNewFile *.html exec '0r ' . s:peekaboo_template_dir . 'page.html'
+    autocmd BufNewFile *.sh exec '0r ' . s:peekaboo_template_dir . 'script.sh'
+    autocmd BufNewFile *.zsh exec '0r ' . s:peekaboo_template_dir . 'script.zsh'
+    autocmd BufNewFile *.sop.tex exec '0r ' . g:peekaboo_template_dir . 'latex.sop.tex'
+    autocmd BufNewFile *.soi.tex exec '0r ' . g:peekaboo_template_dir . 'latex.soi.tex'
+    autocmd BufNewFile *.mom.tex exec '0r ' . g:peekaboo_template_dir . 'latex.mom.tex'
+    autocmd BufNewFile **/mom/**/*.wiki call peekaboo#GenerateMOMTemplate()
     autocmd BufNewFile *.wiki call s:PeekabooGenerateNewVwkDiaryFileTitle()
 augroup END
 

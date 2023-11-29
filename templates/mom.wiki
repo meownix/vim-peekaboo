@@ -1,0 +1,22 @@
+= [ Type <backtick>aca[ or <backtick>aca] to replace this text with your Meeting's Subject ] =
+:momType<backtick>bc$ to complete this MOM tag name with a unique & meaningful tag name
+
+== Date, Time, & Venue ==
+
+    [ Type <backtick>cca[ or <backtick>cca] to replace this text with Day MMM dd, yyyy HH:MM:SS - HH:MM-SS Venue ]
+
+== Participants ==
+
+    * [ ] [ Type <backtick>dca[ or <backtick>dca] to replace this text with the 1st meeting participant's name. ]
+
+== Agenda ==
+
+    1. [ Type <backtick>eca[ or <backtick>eca] to replace this text with your first agenda statement. ]
+
+== MOM ==
+
+    1. [ Type <backtick>fca[ or <backtick>fca] to replace this text with your first minutes of meeting point. ]
+
+== Acknowledgment & Comments ==
+
+    * [ After completing above participant list, type 'dy}'gVP to duplicate them here. ]

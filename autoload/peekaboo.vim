@@ -11,6 +11,7 @@ if &cp || exists("g:peekaboo_autoload_loaded") && g:peekaboo_autoload_loaded
 endif
 
 let g:peekaboo_autoload_loaded = 1
+let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/../templates/'
 
 function! peekaboo#log(msg)
     if !exists("g:peekaboo_log_dir")
@@ -26,7 +27,7 @@ endfunc
 " placeholders to ease the process of replacing each placeholder with built-in
 " Vim motions.
 function! peekaboo#GenerateMOMTemplate()
-    exec 'r ' . g:peekaboo_template_dir . 'mom.wiki'
+    exec 'r ' . s:peekaboo_template_dir . 'mom.wiki'
     exec '0,0 d _'
     "Mark the MOM's subject placeholder to registry a.
     exec "normal! wma"

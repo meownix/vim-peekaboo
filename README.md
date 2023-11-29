@@ -21,8 +21,6 @@ Configuration
     let myWiki.vimwiki_use_calendar = 1
 
     let g:vimwiki_list = [myWiki]
-
-    let g:peekaboo_template_dir = myWiki.template_path
     ```
 * The `mom.wiki` template file must already exist within Peekaboo's template
   directory. If you have pulled the latest MWiki repository, that template file
@@ -39,4 +37,6 @@ Usage
   print the day and date for the entered date with the same format as the
   `<leader>td` keybinding mentioned above.
 * Pressing `<leader>ga` in normal mode will generate the standard MOM template
-  at the current cursor position.
+  at the current cursor position. This feature might be deleted since a newly
+  created Agenda & MOM wiki file has been made to automatically loaded with its
+  standardized template.
