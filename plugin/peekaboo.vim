@@ -63,6 +63,7 @@ augroup peekabooAutoLoadTemplates
     autocmd BufNewFile *.sh 0r ~/.vim/templates/script.sh
     autocmd BufNewFile *.zsh 0r ~/.vim/templates/script.zsh
     autocmd BufNewFile *.sop.tex 0r ~/.vim/templates/latex.sop.tex
+    autocmd BufNewFile *.soi.tex 0r ~/.vim/templates/latex.soi.tex
     autocmd BufNewFile *.mom.tex 0r ~/.vim/templates/latex.mom.tex
     autocmd BufNewFile *.wiki call s:PeekabooGenerateNewVwkDiaryFileTitle()
 augroup END
