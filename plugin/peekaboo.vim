@@ -60,9 +60,9 @@ augroup peekabooAutoLoadTemplates
     autocmd BufNewFile *.html exec '0r ' . s:peekaboo_template_dir . 'page.html'
     autocmd BufNewFile *.sh exec '0r ' . s:peekaboo_template_dir . 'script.sh'
     autocmd BufNewFile *.zsh exec '0r ' . s:peekaboo_template_dir . 'script.zsh'
-    autocmd BufNewFile *.sop.tex exec '0r ' . g:peekaboo_template_dir . 'latex.sop.tex'
-    autocmd BufNewFile *.soi.tex exec '0r ' . g:peekaboo_template_dir . 'latex.soi.tex'
-    autocmd BufNewFile *.mom.tex exec '0r ' . g:peekaboo_template_dir . 'latex.mom.tex'
+    autocmd BufNewFile *.sop.tex exec '0r ' . s:peekaboo_template_dir . 'latex.sop.tex'
+    autocmd BufNewFile *.soi.tex exec '0r ' . s:peekaboo_template_dir . 'latex.soi.tex'
+    autocmd BufNewFile *.mom.tex exec '0r ' . s:peekaboo_template_dir . 'latex.mom.tex'
     autocmd BufNewFile **/mom/**/*.wiki call peekaboo#GenerateMOMTemplate()
     autocmd BufNewFile *.wiki call s:PeekabooGenerateNewVwkDiaryFileTitle()
 augroup END
