@@ -12,7 +12,7 @@ endif
 
 let g:peekaboo_loaded = 1
 
-let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/templates/'
+let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/../templates/'
 
 " Remove FoxPro-generated text in diff mode so that VimDiff will only diff
 " actual lines of code written by programmers.
