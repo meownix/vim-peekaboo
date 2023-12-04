@@ -9,22 +9,9 @@ Configuration
 -------------
 * If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
   [vim-peekaboo](http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git) there.
-* Configure the `g:peekaboo_template_dir` within the `~/.vimrc` file like in the
-  example below:
-    ```
-    let myWiki = {}
-    let myWiki.path = $HOME.'/Documents/vimwiki/doc/'
-    let myWiki.path_html = $HOME.'/Documents/vimwiki/html/'
-    let myWiki.template_path = $HOME.'/Documents/vimwiki/templates/'
-    let myWiki.auto_toc = 1
-    let myWiki.auto_tags = 1
-    let myWiki.vimwiki_use_calendar = 1
-
-    let g:vimwiki_list = [myWiki]
-    ```
 * The `mom.wiki` template file must already exist within Peekaboo's template
-  directory. If you have pulled the latest MWiki repository, that template file
-  should already exist.
+  directory. If you have pulled the latest update, that template file should
+  already exist.
 
 Usage
 -----
