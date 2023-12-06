@@ -9,9 +9,11 @@ Configuration
 -------------
 * If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
   [vim-peekaboo](http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git) there.
-* The `mom.wiki` template file must already exist within Peekaboo's template
-  directory. If you have pulled the latest update, that template file should
-  already exist.
+* If you're using vim-plug, add this to your `~/.vimrc` or your vimrc's related
+  configuration file:
+  ```
+  Plug 'http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git', { 'branch': 'main' }
+  ```
 
 Usage
 -----
