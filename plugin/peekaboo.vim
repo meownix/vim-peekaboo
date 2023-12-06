@@ -94,8 +94,8 @@ inoremap <silent> <leader>td <C-R>=peekaboo#printStdDateOfToday()<CR>
 nnoremap <silent> <leader>nd "=peekaboo#printStdDateOfSpecificDate()<CR>p
 inoremap <silent> <leader>nd <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
 
-nnoremap <silent> <leader>tt "=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>P
-inoremap <silent> <leader>tt <C-R>=strftime("%Y/%m/%d") . "." . expand("$USER")<CR>
+nnoremap <silent> <leader>tt "=peekaboo#GenerateMOMFilename()<CR>P
+inoremap <silent> <leader>tt <C-R>=peekaboo#GenerateMOMFilename()<CR>
 
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 

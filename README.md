@@ -16,7 +16,7 @@ Configuration
 Usage
 -----
 * Pressing `<leader>tt` either in Normal or Insert modes will print the text
-  `YYYY/MM/DD.$USER`
+  `YYYY/MM/DD.N.$USER`
 * Pressing `<leader>td` in either Normal or Insert mode will print the day and
   date as follows: Sat Nov 18, 2023.
 * Pressing `<leader>nd` in either Normal or Insert mode will prompt for the next

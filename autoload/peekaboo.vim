@@ -47,6 +47,19 @@ function! peekaboo#GenerateMOMTemplate()
     exec 'normal! `a'
 endfunction
 
+"Automatically generate the standardized path and naming convention for the MOM
+"file, which will auto-increment the numerical counter in the filename.
+function! peekaboo#GenerateMOMFilename()
+    let momCounter = 1
+    let momFilename = strftime("%Y/%m/%d") . ".1." . expand("$USER")
+    echom expand("%:h") . "/" . momFilename . ".wiki"
+    while filereadable(expand("%:h") . "/" . momFilename . ".wiki")
+        let momCounter = momCounter + 1
+        let momFilename = strftime("%Y/%m/%d") . "." . string(momCounter) . "." . expand("$USER")
+    endwhile
+    return momFilename
+endfunction
+
 function! peekaboo#printStdDateOfToday()
     return strftime("%a %b %d, %Y")
 endfunction
