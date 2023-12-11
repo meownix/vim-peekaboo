@@ -47,17 +47,28 @@ function! peekaboo#GenerateMOMTemplate()
     exec 'normal! `a'
 endfunction
 
-"Automatically generate the standardized path and naming convention for the MOM
-"file, which will auto-increment the numerical counter in the filename.
+"Automatically generate the standardized path and naming convention for the
+"MOM/SOPI Wiki file, which will auto-increment the numerical counter in the
+"filename.
 function! peekaboo#GenerateMOMFilename()
-    let momCounter = 1
-    let momFilename = strftime("%Y/%m/%d") . ".1." . expand("$USER")
-    echom expand("%:h") . "/" . momFilename . ".wiki"
-    while filereadable(expand("%:h") . "/" . momFilename . ".wiki")
-        let momCounter = momCounter + 1
-        let momFilename = strftime("%Y/%m/%d") . "." . string(momCounter) . "." . expand("$USER")
+    if expand("%:h")[-8:] == "/doc/mom"
+        let thePath = expand("%:h")
+    elseif expand("%:h")[-4:] == "/doc"
+        let thePath = expand("%:h") . "/std"
+    else
+        echohl WarningMsg
+        echo "Generate MOM/SOPI only works from within MOM and Wiki Index files."
+        echohl None
+        return ""
+    endif
+    let theCounter = 1
+    let theFilename = strftime("%Y/%m/%d") . ".1." . expand("$USER")
+    "echom expand("%:h") . "/" . theFilename . ".wiki"
+    while filereadable(thePath .  "/" . theFilename . ".wiki")
+        let theCounter = theCounter + 1
+        let theFilename = strftime("%Y/%m/%d") . "." . string(theCounter) . "." . expand("$USER")
     endwhile
-    return momFilename
+    return theFilename
 endfunction
 
 function! peekaboo#printStdDateOfToday()
