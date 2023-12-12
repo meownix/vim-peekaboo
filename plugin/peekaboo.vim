@@ -99,4 +99,26 @@ inoremap <silent> <leader>tt <C-R>=peekaboo#GenerateMOMFilename()<CR>
 
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 
+"[Echo Buffer Number] Save current buffer number to registry l and echo it.
+nnoremap <leader>ebn :let @l=bufnr('%')\|echo @l<cr>
+"[Load Buffer Number] Load previously saved buffer number.
+nnoremap <leader>lbn :b<c-r>l<cr>
+"Buffer Wipeout Diff.
+nnoremap <leader>bwd :bw% #<cr>
+
+" For slow pokers
+
+nnoremap <f5> "=peekaboo#printStdDateOfToday()<CR>p
+inoremap <f5> <C-R>=peekaboo#printStdDateOfToday()<CR>
+
+nnoremap <f6> "=peekaboo#printStdDateOfSpecificDate()<CR>p
+inoremap <f6> <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
+
+"[Echo Buffer Number] Save current buffer number to registry l and echo it.
+nnoremap <f7> :let @l=bufnr('%')\|echo @l<cr>
+"[Load Buffer Number] Load previously saved buffer number.
+nnoremap <f8> :b<c-r>l<cr>
+"Buffer Wipeout Diff.
+nnoremap <f10> :bw% #<cr>
+
 command! PeekabooGenerateMOMTemplate call peekaboo#GenerateMOMTemplate()
