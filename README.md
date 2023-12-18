@@ -38,6 +38,6 @@ Usage
     - Pressing `<leader>lbn` or `<F8>` in normal mode to jump back to the
       buffer number saved in register `l` -- to jump back to the Fugitive commit
       log window.
-    - Pressing `<leader>bwd>` or `<F10>` in normal mode will wipe out the diff
+    - Pressing `<leader>bwd` or `<F10>` in normal mode will wipe out the diff
       window's buffers. This is designed to close the side-by-side diff window
       created by Fugitive and wipe the buffers.
