@@ -122,3 +122,5 @@ nnoremap <f8> :b<c-r>l<cr>
 nnoremap <f10> :bw% #<cr>
 
 command! PeekabooGenerateMOMTemplate call peekaboo#GenerateMOMTemplate()
+command! PeekabooDiff vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+                \ | wincmd p | diffthis

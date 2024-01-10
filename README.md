@@ -41,3 +41,4 @@ Usage
     - Pressing `<leader>bwd` or `<F10>` in normal mode will wipe out the diff
       window's buffers. This is designed to close the side-by-side diff window
       created by Fugitive and wipe the buffers.
+* `:PeekabooDiff` displays changes made side by side on an unsaved file.
