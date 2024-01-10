@@ -7,13 +7,13 @@ technical note-taking.
 
 Configuration
 -------------
-* If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
-  [vim-peekaboo](http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git) there.
-* If you're using vim-plug, add this to your `~/.vimrc` or your vimrc's related
-  configuration file:
-  ```
-  Plug 'http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git', { 'branch': 'main' }
-  ```
+If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
+[vim-peekaboo](http://munchkin.apikkoho.com:3000/Eddy_n00319/vim-peekaboo.git) there.
+
+Update
+------
+If you're using pathogen, cd into the `~/.vim/bundle/vim-peekaboo` directory,
+then run `git pull` from inside there.
 
 Usage
 -----
@@ -42,3 +42,5 @@ Usage
       window's buffers. This is designed to close the side-by-side diff window
       created by Fugitive and wipe the buffers.
 * `:PeekabooDiff` displays changes made side by side on an unsaved file.
+* `:help peekaboo` opens the vim-peekaboo help file in a split window.
+* `:tab h peekaboo` opens the vim-peekaboo help file in a new tab.

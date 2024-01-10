@@ -1,0 +1,61 @@
+*peekaboo.txt*   A specially crafted plugin for the Me Tech Tech team
+
+==============================================================================
+CONTENTS                                                            *peekaboo*
+
+    1. Intro                         |peekaboo-intro|
+    2. Prerequisites                 |peekaboo-prerequisites|
+    3. Mappings                      |peekaboo-mappings|
+    4. Commands                      |peekaboo-commands|
+
+==============================================================================
+1. Intro                                                      *peekaboo-intro*
+
+This is a specially created plugin to be used in a standardized teamwork
+workflow that utilizes Vimwiki+Fugitive for collaborative management of minutes
+of meetings (MOM), technical note-taking, and any form of work-in-progress
+documentation.
+
+==============================================================================
+2. Prerequisites                                      *peekaboo-prerequisites*
+
+Make sure you have already installed the Vimwiki plugin and cloned the MWiki
+repository.
+
+==============================================================================
+3. Mappings                                                *peekaboo-mappings*
+
+MAP                MODE
+                                                         *peekaboo_<leader>tt*
+<leader>tt          ni    Print the text `YYYY/MM/DD.N.$USER`
+
+                                       *peekaboo_<leader>td*   *peekaboo_<F5>*
+<leader>td, <F5>    ni    Print the day and date as follows: Sat Nov 18, 2023.
+
+                                       *peekaboo_<leader>td*   *peekaboo_<F5>*
+<leader>nd, <F6>    ni    Prompt for the next working day's date. Users are free
+                          to enter any date they wish, and it will print the day
+                          and date for the entered date with the same format as
+                          the `<leader>td` keybinding mentioned above.
+
+                                      *peekaboo_<leader>ebn*   *peekaboo_<F7>*
+<leader>ebn, <F7>   n     Copy the current displayed buffer number to register
+                          `l` and display the number below the statusline. This
+                          is used to get the Fugitive commit log window buffer
+                          number and save it in the register `l` to be used
+                          later by the next keybinding below.
+
+                                      *peekaboo_<leader>lbn*   *peekaboo_<F8>*
+<leader>lbn, <F8>   n     Jump back to the buffer number saved in register `l`
+                          -- to jump back to the Fugitive commit log window.
+
+                                     *peekaboo_<leader>bwd*   *peekaboo_<F10>*
+<leader>bwd, <F10>  n     Wipe out the diff window's buffers. This is designed
+                          to close the side-by-side diff window created by
+                          Fugitive and wipe the buffers.
+
+==============================================================================
+4. Commands                                                *peekaboo-commands*
+
+*:PeekabooDiff*
+    Displays changes made side by side on an unsaved file.
