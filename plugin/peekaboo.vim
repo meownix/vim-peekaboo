@@ -121,6 +121,14 @@ nnoremap <f8> :b<c-r>l<cr>
 "Buffer Wipeout Diff.
 nnoremap <f10> :bw% #<cr>
 
+" View and edit mode for Vimwiki file
+nnoremap <silent><leader>vm :set concealcursor=nvic<cr>
+nnoremap <silent><leader>em :set concealcursor=<cr>
+
 command! PeekabooGenerateMOMTemplate call peekaboo#GenerateMOMTemplate()
+"
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
 command! PeekabooDiff vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
                 \ | wincmd p | diffthis

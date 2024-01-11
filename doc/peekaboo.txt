@@ -27,32 +27,54 @@ repository.
 
 MAP                MODE
                                                          *peekaboo_<leader>tt*
-<leader>tt          ni    Print the text `YYYY/MM/DD.N.$USER`
+<leader>tt          ni    Stands for Today's documenTation. Print the
+                          standardization full path for a new MWiki
+                          documentation: `YYYY/MM/DD.N.$USER`.
 
                                        *peekaboo_<leader>td*   *peekaboo_<F5>*
-<leader>td, <F5>    ni    Print the day and date as follows: Sat Nov 18, 2023.
+<leader>td, <F5>    ni    Stands for Today's Date. Print the day and date as
+                          follows: Sat Nov 18, 2023.
 
-                                       *peekaboo_<leader>td*   *peekaboo_<F5>*
-<leader>nd, <F6>    ni    Prompt for the next working day's date. Users are free
-                          to enter any date they wish, and it will print the day
-                          and date for the entered date with the same format as
-                          the `<leader>td` keybinding mentioned above.
+                                       *peekaboo_<leader>nd*   *peekaboo_<F6>*
+<leader>nd, <F6>    ni    Stands for Next Date. Prompt for the next working
+                          day's date. Users are free to enter any date they
+                          wish, and it will print the day and date for the
+                          entered date with the same format as the `<leader>td`
+                          keybinding mentioned above.
 
                                       *peekaboo_<leader>ebn*   *peekaboo_<F7>*
-<leader>ebn, <F7>   n     Copy the current displayed buffer number to register
-                          `l` and display the number below the statusline. This
-                          is used to get the Fugitive commit log window buffer
-                          number and save it in the register `l` to be used
-                          later by the next keybinding below.
+<leader>ebn, <F7>   n     Stands for Echo Buffer Number. Copy the current
+                          displayed buffer number to register `l` and display
+                          the number below the statusline. This is used to get
+                          the Fugitive commit log window buffer number and save
+                          it in the register `l` to be used later by the next
+                          keybinding below.
 
                                       *peekaboo_<leader>lbn*   *peekaboo_<F8>*
-<leader>lbn, <F8>   n     Jump back to the buffer number saved in register `l`
-                          -- to jump back to the Fugitive commit log window.
+<leader>lbn, <F8>   n     Stands for Load Buffer Number. Jump back to the buffer
+                          number saved in register `l` -- to jump back to the
+                          Fugitive commit log window.
 
                                      *peekaboo_<leader>bwd*   *peekaboo_<F10>*
-<leader>bwd, <F10>  n     Wipe out the diff window's buffers. This is designed
-                          to close the side-by-side diff window created by
-                          Fugitive and wipe the buffers.
+<leader>bwd, <F10>  n     Stands for Buffer Wipe Diff. Wipe out the diff
+                          window's buffers. This is designed to close the
+                          side-by-side diff window created by Fugitive and wipe
+                          the buffers.
+
+                                                         *peekaboo_<leader>vm*
+<leader>vm          n     Stands for View Mode. Set concealcursor to normal,
+                          visual, insert, and command line. This means that
+                          markup text will remain in its formatted form when the
+                          cursor is in the same line in all modes: normal,
+                          insert, visual, and command line. This is useful when
+                          we only want to view a document with markup text and
+                          do not need to see the address of the link.
+
+                                                         *peekaboo_<leader>em*
+<leader>em          n     Stands for Edit Mode. Set concealcursor to none. This
+                          means that marked-up text will display its actual
+                          content when the cursor is located on the same line.
+                          This is the default behavior.
 
 ==============================================================================
 4. Commands                                                *peekaboo-commands*

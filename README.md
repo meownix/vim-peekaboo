@@ -5,6 +5,10 @@ This is a specially created plugin to be used in a standardized teamwork
 workflow that utilizes Vimwiki+Fugitive for collaborative management of MOM and
 technical note-taking.
 
+Dependencies
+------------
+* Vimwiki
+
 Configuration
 -------------
 If you're using pathogen, cd into the `~/.vim/bundle` directory, then clone
@@ -44,3 +48,10 @@ Usage
 * `:PeekabooDiff` displays changes made side by side on an unsaved file.
 * `:help peekaboo` opens the vim-peekaboo help file in a split window.
 * `:tab h peekaboo` opens the vim-peekaboo help file in a new tab.
+
+Important Note
+--------------
+If there are any additional features added to this plugin in the future, they
+will not be included in this README file. Users are encouraged to check the help
+file instead. As of the time this information was written, two more keybindings
+have been added to this plugin.
