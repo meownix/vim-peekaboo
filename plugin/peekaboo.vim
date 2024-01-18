@@ -14,6 +14,12 @@ let g:peekaboo_loaded = 1
 
 let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/../templates/'
 
+if has('mac')
+    silent exec 'language en_US.UTF-8'
+elseif has('unix')
+    silent exec 'language en_US.utf8'
+endif
+
 " Remove FoxPro-generated text in diff mode so that VimDiff will only diff
 " actual lines of code written by programmers.
 function! s:PeekabooRemoveGeneratedCode()
