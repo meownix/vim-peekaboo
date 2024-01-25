@@ -34,7 +34,7 @@ function! s:PeekabooRemoveGeneratedCode()
         call peekaboo#log("Cleaning garbage in [" .. bufname() .. "]")
         silent! set modifiable|set bt=
         silent! 1,18d
-        silent! g/_[0-9,a-z,A-Z]\{9\}/d
+        silent! g/\<_[0-9,a-z,A-Z]\{9\}/d
         silent! g/^\*.*From\ Screen:/d
         silent! set nomodifiable|set bt=nofile|let b:cleaned = 1
         call peekaboo#log("PeekabooRemoveGeneratedCode() condition matches:Garbage removed.")
