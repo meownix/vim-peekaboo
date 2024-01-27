@@ -32,9 +32,9 @@ MAP                MODE
                           documentation: `YYYY/MM/DD.N.$USER`.
 
                                                          *peekaboo_<leader>TT*
-<leader>TT          ni    Stands for Touch Typing. Print the standardization
-                          full path for a new touch typing practice record:
-                          `YYYY/MM/DD.$USER.typingPractice`.
+<leader>TT          ni    Stands for Touch Typing. Print the today's typing
+                          practice record Vimwiki's link. Example:
+                          [[2024/01/28.billy.typingPractice|Sun Jan 28, 2024]] ~
 
                                        *peekaboo_<leader>td*   *peekaboo_<F5>*
 <leader>td, <F5>    ni    Stands for Today's Date. Print the day and date as
@@ -86,3 +86,5 @@ MAP                MODE
 
 *:PeekabooDiff*
     Displays changes made side by side on an unsaved file.
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

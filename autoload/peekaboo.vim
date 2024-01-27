@@ -75,8 +75,9 @@ endfunction
 "Touch typing practice Wiki file: yyyy/mm/dd.user.typingPractice
 function! peekaboo#GenerateTouchTypingFilename()
     if expand("%:t") == "TouchTyping.wiki"
-        let theFilename = strftime("%Y/%m/%d") . "." . expand("$USER") . ".typingPractice"
-        return theFilename
+        let theTTLink = "[[" . strftime("%Y/%m/%d") . "." . expand("$USER") .
+                    \ ".typingPractice" . "|" . strftime("%a %b %d, %Y") . "]]"
+        return theTTLink
     else
         echohl WarningMsg
         echo "Generate Touch Typing Practice fullpath only works within the Touch Typing file index."
