@@ -31,6 +31,11 @@ MAP                MODE
                           standardization full path for a new MWiki
                           documentation: `YYYY/MM/DD.N.$USER`.
 
+                                                         *peekaboo_<leader>TT*
+<leader>TT          ni    Stands for Touch Typing. Print the standardization
+                          full path for a new touch typing practice record:
+                          `YYYY/MM/DD.$USER.typingPractice`.
+
                                        *peekaboo_<leader>td*   *peekaboo_<F5>*
 <leader>td, <F5>    ni    Stands for Today's Date. Print the day and date as
                           follows: Sat Nov 18, 2023.

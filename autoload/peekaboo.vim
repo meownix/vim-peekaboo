@@ -57,7 +57,7 @@ function! peekaboo#GenerateMOMFilename()
         let thePath = expand("%:h") . "/std"
     else
         echohl WarningMsg
-        echo "Generate MOM/SOPI only works from within MOM, SRS, and Wiki Index files."
+        echo "Generate MOM/SOPI fullpath only works within MOM, SRS, & Wiki Index files."
         echohl None
         return ""
     endif
@@ -69,6 +69,20 @@ function! peekaboo#GenerateMOMFilename()
         let theFilename = strftime("%Y/%m/%d") . "." . string(theCounter) . "." . expand("$USER")
     endwhile
     return theFilename
+endfunction
+
+"Automatically generate the standardized path and naming convention for the
+"Touch typing practice Wiki file: yyyy/mm/dd.user.typingPractice
+function! peekaboo#GenerateTouchTypingFilename()
+    if expand("%:t") == "TouchTyping.wiki"
+        let theFilename = strftime("%Y/%m/%d") . "." . expand("$USER") . ".typingPractice"
+        return theFilename
+    else
+        echohl WarningMsg
+        echo "Generate Touch Typing Practice fullpath only works within the Touch Typing file index."
+        echohl None
+        return ""
+    endif
 endfunction
 
 function! peekaboo#printStdDateOfToday()
