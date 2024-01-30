@@ -25,7 +25,6 @@ endif
 function! s:PeekabooRemoveGeneratedCode()
     call peekaboo#log("Calling PeekabooRemoveGeneratedCode()")
     if matchstr(getline(1), '^\*       Ö') ==  '*       Ö'
-        set ft=foxpro
         let isFoxGCode = 1
     else
         let isFoxGCode = 0
@@ -45,7 +44,7 @@ endfunction
 
 augroup peekabooHatesFoxpro
     au!
-    autocmd BufEnter *.spr,*.prg,*.mpr,*.SPR,*.PRG,*.MPR,svn-* |
+    autocmd BufEnter *.spr,*.prg,*.mpr,*.SPR,*.PRG,*.MPR,svn-* set ft=foxpro |
                 \call s:PeekabooRemoveGeneratedCode()
 augroup END
 
