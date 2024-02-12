@@ -10,6 +10,7 @@ peekaboo_<F5>	peekaboo.txt	/*peekaboo_<F5>*
 peekaboo_<F6>	peekaboo.txt	/*peekaboo_<F6>*
 peekaboo_<F7>	peekaboo.txt	/*peekaboo_<F7>*
 peekaboo_<F8>	peekaboo.txt	/*peekaboo_<F8>*
+peekaboo_<leader>TT	peekaboo.txt	/*peekaboo_<leader>TT*
 peekaboo_<leader>bwd	peekaboo.txt	/*peekaboo_<leader>bwd*
 peekaboo_<leader>ebn	peekaboo.txt	/*peekaboo_<leader>ebn*
 peekaboo_<leader>em	peekaboo.txt	/*peekaboo_<leader>em*

@@ -105,6 +105,9 @@ inoremap <silent> <leader>tt <C-R>=peekaboo#GenerateMOMFilename()<CR>
 nnoremap <silent> <leader>TT "=peekaboo#GenerateTouchTypingFilename()<CR>P
 inoremap <silent> <leader>TT <C-R>=peekaboo#GenerateTouchTypingFilename()<CR>
 
+nnoremap <silent> <leader>ds "=strftime("%Y%m%d")<CR>P
+inoremap <silent> <leader>ds <C-R>=strftime("%Y%m%d")<CR>
+
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 
 "[Echo Buffer Number] Save current buffer number to registry l and echo it.
