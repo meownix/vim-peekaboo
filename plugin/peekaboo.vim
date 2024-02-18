@@ -45,6 +45,7 @@ endfunction
 augroup peekabooHatesFoxpro
     au!
     autocmd BufEnter *.spr,*.prg,*.mpr,*.SPR,*.PRG,*.MPR,svn-* set ft=foxpro |
+                \set autoindent |
                 \call s:PeekabooRemoveGeneratedCode()
 augroup END
 
