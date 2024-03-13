@@ -111,12 +111,17 @@ inoremap <silent> <leader>ds <C-R>=strftime("%Y%m%d")<CR>
 
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 
-"[Echo Buffer Number] Save current buffer number to registry l and echo it.
+" [Echo Buffer Number] Save current buffer number to registry l and echo it.
 nnoremap <leader>ebn :let @l=bufnr('%')\|echo @l<cr>
-"[Load Buffer Number] Load previously saved buffer number.
+
+" [Load Buffer Number] Load previously saved buffer number.
 nnoremap <leader>lbn :b<c-r>l<cr>
-"Buffer Wipeout Diff.
+
+" Buffer Wipeout Diff.
 nnoremap <leader>bwd :bw% #<cr>
+
+" Remove trailing spaces.
+nnoremap <leader>rts :%s/\s\+$//g\|noh<cr>
 
 " For slow pokers
 

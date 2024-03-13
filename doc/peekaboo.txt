@@ -81,6 +81,9 @@ MAP                MODE
                           content when the cursor is located on the same line.
                           This is the default behavior.
 
+						        *peekaboo_<leader>rts*
+<leader>rts	    n     Remove trailing spaces.
+
 ==============================================================================
 4. Commands                                                *peekaboo-commands*
 
