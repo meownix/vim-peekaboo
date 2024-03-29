@@ -54,10 +54,10 @@ function! s:PeekabooGenerateNewVwkDiaryFileTitle()
     let Ymd = matchstr(expand('%:t'), '\d\{4\}-\d\{2\}-\d\{2\}')
     if Ymd != ''
         let vwkTitle = "= " .. strftime("%a %b %d, %Y", strptime("%Y-%m-%d", Ymd)) ..
-                    \ " - ... press s to begin typing the title ... ="
+                    \ " ="
         call append(0, vwkTitle)
         2,$ d _
-        exec "normal! f.v5f."
+        exec "normal! $"
     endif
 endfunction
 
