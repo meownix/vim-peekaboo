@@ -11,7 +11,7 @@
 
 == Agenda ==
 
-    1. [ Type <backtick>ec then c% to replace this text with your first agenda statement. ]
+    1. [ Type <backtick>e then c% to replace this text with your first agenda statement. ]
 
 == MOM ==
 
