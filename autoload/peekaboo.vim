@@ -51,10 +51,10 @@ endfunction
 "MOM/SOPI Wiki file, which will auto-increment the numerical counter in the
 "filename.
 function! peekaboo#GenerateMOMFilename()
-    if expand("%:h")[-8:] == "/doc/mom" || expand("%:h")[-8:] == "/doc/srs"
-        let thePath = expand("%:h")
-    elseif expand("%:h")[-4:] == "/doc"
-        let thePath = expand("%:h") . "/std"
+    if expand("%:p")[-19:] == "/doc/mom/index.wiki" ||
+                \ expand("%:p")[-19:] == "/doc/srs/index.wiki" ||
+                \ expand("%:p")[-19:] == "/doc/std/index.wiki"
+        let thePath = expand("%:p:h")
     else
         echohl WarningMsg
         echo "Generate MOM/SOPI fullpath only works within MOM, SRS, & Wiki Index files."
