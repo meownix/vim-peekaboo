@@ -58,7 +58,7 @@ MAP                MODE
                                       *peekaboo_<leader>lbn*   *peekaboo_<F8>*
 <leader>lbn, <F8>   n     Stands for Load Buffer Number. Jump back to the buffer
                           number saved in register `l` -- to jump back to the
-                          Fugitive commit log window.
+                          Fugitive commit log window, in new tab.
 
                                      *peekaboo_<leader>bwd*   *peekaboo_<F10>*
 <leader>bwd, <F10>  n     Stands for Buffer Wipe Diff. Wipe out the diff

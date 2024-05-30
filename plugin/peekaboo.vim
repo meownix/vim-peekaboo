@@ -114,8 +114,8 @@ nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 " [Echo Buffer Number] Save current buffer number to registry l and echo it.
 nnoremap <leader>ebn :let @l=bufnr('%')\|echo @l<cr>
 
-" [Load Buffer Number] Load previously saved buffer number.
-nnoremap <leader>lbn :b<c-r>l<cr>
+" [Load Buffer Number] Load previously saved buffer number in new tab.
+nnoremap <leader>lbn :tabe %<cr>:b<c-r>l<cr>
 
 " Buffer Wipeout Diff.
 nnoremap <leader>bwd :bw% #<cr>
