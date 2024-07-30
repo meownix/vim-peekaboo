@@ -106,3 +106,12 @@ function! peekaboo#printStdDateOfSpecificDate()
 
     return strftime("%a %b %d, %Y", strptime("%Y%m%d", answer))
 endfunction
+
+"Execute the Fugitive's G command and passing accepted GIT's commands, open its
+"result in a new tab and reloadable by using the <leader>lbn keybinding.
+function! peekaboo#fugitive(params)
+    silent! exec ":tabe %|G " . a:params . "|only|let @l=bufnr('%')|"
+    echohl WarningMsg
+    echo "Type <leader>lbn or hit <F8> to re-open this log in a new tab."
+    echohl None
+endfunction

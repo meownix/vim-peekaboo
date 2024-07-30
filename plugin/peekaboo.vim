@@ -112,7 +112,8 @@ inoremap <silent> <leader>ds <C-R>=strftime("%Y%m%d")<CR>
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 
 " [Echo Buffer Number] Save current buffer number to registry l and echo it.
-nnoremap <leader>ebn :let @l=bufnr('%')\|echo @l<cr>
+nnoremap <leader>ebn :let @l=bufnr('%')\|
+            \ echo 'Type <leader>lbn or hit <F8> to re-open this log in a new tab.'<cr>
 
 " [Load Buffer Number] Load previously saved buffer number in new tab.
 nnoremap <leader>lbn :tabe %<cr>:b<c-r>l<cr>
@@ -132,9 +133,11 @@ nnoremap <f6> "=peekaboo#printStdDateOfSpecificDate()<CR>p
 inoremap <f6> <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
 
 "[Echo Buffer Number] Save current buffer number to registry l and echo it.
-nnoremap <f7> :let @l=bufnr('%')\|echo @l<cr>
+nnoremap <f7> :let @l=bufnr('%')\|
+            \ echo 'Type <leader>lbn or hit <F8> to re-open this log in a new tab.'<cr>
+
 "[Load Buffer Number] Load previously saved buffer number.
-nnoremap <f8> :b<c-r>l<cr>
+nnoremap <f8> :tabe %<cr>:b<c-r>l<cr>
 "Buffer Wipeout Diff.
 nnoremap <f10> :bw% #<cr>
 
@@ -142,10 +145,15 @@ nnoremap <f10> :bw% #<cr>
 nnoremap <silent><leader>vm :set concealcursor=nvic<cr>
 nnoremap <silent><leader>em :set concealcursor=<cr>
 
-command! PeekabooGenerateMOMTemplate call peekaboo#GenerateMOMTemplate()
-"
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 command! PeekabooDiff vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
                 \ | wincmd p | diffthis
+command! PD vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+                \ | wincmd p | diffthis
+
+" Run Fugitive's G command, open its result in new tab and enable reloading the
+" output using the <leader>lbn and <F8> keybindings.
+command! -nargs=* PeekabooG call peekaboo#fugitive(<q-args>)
+command! -nargs=* PG call peekaboo#fugitive(<q-args>)

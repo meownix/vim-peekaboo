@@ -1,4 +1,7 @@
+:PD	peekaboo.txt	/*:PD*
+:PG	peekaboo.txt	/*:PG*
 :PeekabooDiff	peekaboo.txt	/*:PeekabooDiff*
+:PeekabooG	peekaboo.txt	/*:PeekabooG*
 peekaboo	peekaboo.txt	/*peekaboo*
 peekaboo-commands	peekaboo.txt	/*peekaboo-commands*
 peekaboo-intro	peekaboo.txt	/*peekaboo-intro*
