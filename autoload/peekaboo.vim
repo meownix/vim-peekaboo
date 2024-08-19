@@ -53,11 +53,19 @@ endfunction
 function! peekaboo#GenerateMOMFilename()
     if expand("%:p")[-19:] == "/doc/mom/index.wiki" ||
                 \ expand("%:p")[-19:] == "/doc/srs/index.wiki" ||
-                \ expand("%:p")[-19:] == "/doc/std/index.wiki"
-        let thePath = expand("%:p:h")
+                \ expand("%:p")[-19:] == "/doc/std/index.wiki" ||
+                \ expand("%:p")[-19:] == "/doc/tex/index.wiki" ||
+                \ expand("%:p")[-18:] == "/doc/gpgIndex.wiki"
+        if expand("%:f") == "gpgIndex.wiki"
+            let thePath = expand("%:p:h") . "/../gpg"
+            let thePrefix = thePath[-7:]
+        else
+            let thePath = expand("%:p:h")
+            let thePrefix = thePath[-4:]
+        endif
     else
         echohl WarningMsg
-        echo "Generate MOM/SOPI fullpath only works within MOM, SRS, & Wiki Index files."
+        echo "Generate MWiki's fullpath only works for MOM, SRS, Tex, GPG & SOP/I Wiki Index files."
         echohl None
         return ""
     endif
@@ -68,7 +76,7 @@ function! peekaboo#GenerateMOMFilename()
         let theCounter = theCounter + 1
         let theFilename = strftime("%Y/%m/%d") . "." . string(theCounter) . "." . expand("$USER")
     endwhile
-    return theFilename
+    return thePrefix . "/" . theFilename
 endfunction
 
 "Automatically generate the standardized path and naming convention for the
