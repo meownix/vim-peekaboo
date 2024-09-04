@@ -123,3 +123,27 @@ function! peekaboo#fugitive(params)
     echo "Type <leader>lbn or hit <F8> to re-open this log in a new tab."
     echohl None
 endfunction
+
+"Automatically generate the standardized path and naming convention for the
+"MWiki's Diary, which will auto-increment the numerical counter in the filename.
+function! peekaboo#newDiary()
+    let remote_url = system(
+                        \"pushd " . expand("%:h") .  ";" .
+                        \"git config remote.origin.url;" .
+                        \"popd"
+                        \)->split('\n', 1)[0]
+
+    if remote_url == "http://munchkin.apikkoho.com:3000/Eddy_n00319/MWiki.git"
+        silent! exec ":tabe %|VimwikiDiaryIndex"
+        let thePath = expand("%:h")
+        let theCounter = 1
+        let theFilename = strftime("%Y-%m-%d") . ".1." . expand("$USER") . ".wiki"
+        while filereadable(thePath .  "/" . theFilename)
+            let theCounter = theCounter + 1
+            let theFilename = strftime("%Y-%m-%d") . "." . string(theCounter) . "." . expand("$USER") . ".wiki"
+        endwhile
+        silent! exec ":e " . thePath . "/" . theFilename
+    else
+        echo "Generate a new MWiki Diary only work on the MWiki working copy."
+    endif
+endfunction

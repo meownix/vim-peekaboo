@@ -157,3 +157,10 @@ command! PD vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 " output using the <leader>lbn and <F8> keybindings.
 command! -nargs=* PeekabooG call peekaboo#fugitive(<q-args>)
 command! -nargs=* PG call peekaboo#fugitive(<q-args>)
+
+" Create a standardized MWiki's diary.
+command! PeekabooNewDiary call peekaboo#newDiary()
+command! PND call peekaboo#newDiary()
+
+" Default keybinding for PeekabooJournal command.
+nnoremap <silent><leader>pnd :PND<cr>
