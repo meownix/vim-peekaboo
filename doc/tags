@@ -1,7 +1,9 @@
 :PD	peekaboo.txt	/*:PD*
 :PG	peekaboo.txt	/*:PG*
+:PND	peekaboo.txt	/*:PND*
 :PeekabooDiff	peekaboo.txt	/*:PeekabooDiff*
 :PeekabooG	peekaboo.txt	/*:PeekabooG*
+:PeekabooNewDiary	peekaboo.txt	/*:PeekabooNewDiary*
 peekaboo	peekaboo.txt	/*peekaboo*
 peekaboo-commands	peekaboo.txt	/*peekaboo-commands*
 peekaboo-intro	peekaboo.txt	/*peekaboo-intro*
@@ -13,12 +15,14 @@ peekaboo_<F5>	peekaboo.txt	/*peekaboo_<F5>*
 peekaboo_<F6>	peekaboo.txt	/*peekaboo_<F6>*
 peekaboo_<F7>	peekaboo.txt	/*peekaboo_<F7>*
 peekaboo_<F8>	peekaboo.txt	/*peekaboo_<F8>*
+peekaboo_<F9>	peekaboo.txt	/*peekaboo_<F9>*
 peekaboo_<leader>TT	peekaboo.txt	/*peekaboo_<leader>TT*
 peekaboo_<leader>bwd	peekaboo.txt	/*peekaboo_<leader>bwd*
 peekaboo_<leader>ebn	peekaboo.txt	/*peekaboo_<leader>ebn*
 peekaboo_<leader>em	peekaboo.txt	/*peekaboo_<leader>em*
 peekaboo_<leader>lbn	peekaboo.txt	/*peekaboo_<leader>lbn*
 peekaboo_<leader>nd	peekaboo.txt	/*peekaboo_<leader>nd*
+peekaboo_<leader>pnd	peekaboo.txt	/*peekaboo_<leader>pnd*
 peekaboo_<leader>rts	peekaboo.txt	/*peekaboo_<leader>rts*
 peekaboo_<leader>td	peekaboo.txt	/*peekaboo_<leader>td*
 peekaboo_<leader>tt	peekaboo.txt	/*peekaboo_<leader>tt*

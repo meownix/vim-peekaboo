@@ -127,13 +127,7 @@ endfunction
 "Automatically generate the standardized path and naming convention for the
 "MWiki's Diary, which will auto-increment the numerical counter in the filename.
 function! peekaboo#newDiary()
-    let remote_url = system(
-                        \"pushd " . expand("%:h") .  ";" .
-                        \"git config remote.origin.url;" .
-                        \"popd"
-                        \)->split('\n', 1)[0]
-
-    if remote_url == "http://munchkin.apikkoho.com:3000/Eddy_n00319/MWiki.git"
+    if exists(':VimwikiDiaryIndex')
         silent! exec ":tabe %|VimwikiDiaryIndex"
         let thePath = expand("%:h")
         let theCounter = 1
@@ -144,6 +138,6 @@ function! peekaboo#newDiary()
         endwhile
         silent! exec ":e " . thePath . "/" . theFilename
     else
-        echo "Generate a new MWiki Diary only work on the MWiki working copy."
+        echo "Peekaboo cannot generate Vimwiki Extended Diary without Vimwiki."
     endif
 endfunction
