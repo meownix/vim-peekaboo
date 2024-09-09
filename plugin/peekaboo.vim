@@ -164,3 +164,4 @@ command! PND call peekaboo#newDiary()
 
 " Default keybinding for PeekabooJournal command.
 nnoremap <silent><leader>pnd :PND<cr>
+nnoremap <f9> :PND<cr>
