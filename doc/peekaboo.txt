@@ -47,32 +47,21 @@ MAP                MODE
                           entered date with the same format as the `<leader>td`
                           keybinding mentioned above.
 
-                                      *peekaboo_<leader>ebn*   *peekaboo_<F7>*
-<leader>ebn, <F7>   n     Stands for Echo Buffer Number. Copy the current
-                          displayed buffer number to register `l` and display
-                          the number below the statusline. This is used to get
-                          the Fugitive commit log window buffer number and save
-                          it in the register `l` to be used later by the next
-                          keybinding below.
+                                                               *peekaboo_<F8>*
+<F8>                n     Re-open the last Fugitive git log result in new tab.
 
-                                      *peekaboo_<leader>lbn*   *peekaboo_<F8>*
-<leader>lbn, <F8>   n     Stands for Load Buffer Number. Jump back to the buffer
-                          number saved in register `l` -- to jump back to the
-                          Fugitive commit log window, in new tab.
-
-                                      *peekaboo_<leader>pnd*   *peekaboo_<F9>*
-<leader>pnd, <F9>   n     Stands for Peekaboo New Diary. This is the default
+                                                               *peekaboo_<F9>*
+<F9>                n     Stands for Peekaboo New Diary. This is the default
 			  key binding that executing the `:PeekabooNewDiary`
 			  or its short version `:PND` command. This will
 			  create a new custom Vimwiki's diary file, we named
 			  it as MWiki's Diary File which following this file
                           naming convention: `YYYY-MM-DD.N.$USER.wiki`.
 
-                                     *peekaboo_<leader>bwd*   *peekaboo_<F10>*
-<leader>bwd, <F10>  n     Stands for Buffer Wipe Diff. Wipe out the diff
-                          window's buffers. This is designed to close the
-                          side-by-side diff window created by Fugitive and wipe
-                          the buffers.
+                                                              *peekaboo_<F10>*
+<F10>               n     Wipe out the vimdiff buffers. This is designed to
+			  close the side-by-side diff windows created by
+			  Fugitive and wipe the buffers.
 
                                                          *peekaboo_<leader>vm*
 <leader>vm          n     Stands for View Mode. Set concealcursor to normal,

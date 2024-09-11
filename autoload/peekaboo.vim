@@ -12,6 +12,7 @@ endif
 
 let g:peekaboo_autoload_loaded = 1
 let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/../templates/'
+let s:gitLogFilename = ""
 
 function! peekaboo#log(msg)
     if !exists("g:peekaboo_log_dir")
@@ -118,10 +119,37 @@ endfunction
 "Execute the Fugitive's G command and passing accepted GIT's commands, open its
 "result in a new tab and reloadable by using the <leader>lbn keybinding.
 function! peekaboo#fugitive(params)
-    silent! exec ":tabe %|G " . a:params . "|only|let @l=bufnr('%')|"
-    echohl WarningMsg
-    echo "Type <leader>lbn or hit <F8> to re-open this log in a new tab."
-    echohl None
+    if exists(':G')
+        if empty(expand('%'))
+            tabe
+        else
+            tabe %
+        endif
+        silent! exec "G " . a:params
+        only
+        call peekaboo#storeGitLogFilename()
+    else
+        echohl WarningMsg
+        echo "The G command is not available. Check your configuration for the Fugitive plugin."
+        echohl None
+    endif
+endfunction
+
+function! peekaboo#storeGitLogFilename()
+    if &ft == "git"
+        let s:gitLogFilename = expand('%')
+    endif
+endfunction
+
+function! peekaboo#restoreGitLogInNewTab()
+    if !empty(s:gitLogFilename)
+        silent! exe "tabe " . expand(s:gitLogFilename)
+    endif
+endfunction
+
+function! peekaboo#closeDiffWinsAndRestoreGitLog()
+    bw% #
+    call peekaboo#restoreGitLogInNewTab()
 endfunction
 
 "Automatically generate the standardized path and naming convention for the

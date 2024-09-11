@@ -111,16 +111,6 @@ inoremap <silent> <leader>ds <C-R>=strftime("%Y%m%d")<CR>
 
 nnoremap <silent> <leader>ga :PeekabooGenerateMOMTemplate<CR>
 
-" [Echo Buffer Number] Save current buffer number to registry l and echo it.
-nnoremap <leader>ebn :let @l=bufnr('%')\|
-            \ echo 'Type <leader>lbn or hit <F8> to re-open this log in a new tab.'<cr>
-
-" [Load Buffer Number] Load previously saved buffer number in new tab.
-nnoremap <leader>lbn :tabe %<cr>:b<c-r>l<cr>
-
-" Buffer Wipeout Diff.
-nnoremap <leader>bwd :bw% #<cr>
-
 " Remove trailing spaces.
 nnoremap <leader>rts :%s/\s\+$//g\|noh<cr>
 
@@ -132,14 +122,14 @@ inoremap <f5> <C-R>=peekaboo#printStdDateOfToday()<CR>
 nnoremap <f6> "=peekaboo#printStdDateOfSpecificDate()<CR>p
 inoremap <f6> <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
 
-"[Echo Buffer Number] Save current buffer number to registry l and echo it.
-nnoremap <f7> :let @l=bufnr('%')\|
-            \ echo 'Type <leader>lbn or hit <F8> to re-open this log in a new tab.'<cr>
-
 "[Load Buffer Number] Load previously saved buffer number.
-nnoremap <f8> :tabe %<cr>:b<c-r>l<cr>
+nnoremap <f8> :call peekaboo#restoreGitLogInNewTab()<cr>
+
+" Default keybinding for PeekabooJournal command.
+nnoremap <f9> :PND<cr>
+
 "Buffer Wipeout Diff.
-nnoremap <f10> :bw% #<cr>
+nnoremap <f10> :call peekaboo#closeDiffWinsAndRestoreGitLog()<cr>
 
 " View and edit mode for Vimwiki file
 nnoremap <silent><leader>vm :set concealcursor=nvic<cr>
@@ -161,7 +151,3 @@ command! -nargs=* PG call peekaboo#fugitive(<q-args>)
 " Create a standardized MWiki's diary.
 command! PeekabooNewDiary call peekaboo#newDiary()
 command! PND call peekaboo#newDiary()
-
-" Default keybinding for PeekabooJournal command.
-nnoremap <silent><leader>pnd :PND<cr>
-nnoremap <f9> :PND<cr>
