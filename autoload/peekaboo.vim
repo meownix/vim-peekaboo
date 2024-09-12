@@ -104,16 +104,24 @@ endfunction
 "adjusted by the user.
 function! peekaboo#printStdDateOfSpecificDate()
     let currentDate = localtime()
-    let nextDate = currentDate + 24 * 60 * 60
+    let nextDate = currentDate + 2 * 24 * 60 * 60
 
     while strftime("%u", nextDate) =~# '[67]'
         let nextDate = nextDate + 24 * 60 * 60
     endwhile
 
-    let answer = input(substitute(system('cal -3w'), '[^\ A-Za-z0-9\n]', '', 'g') . "\n
-                \Enter the meeting date (YYYYMMDD): ", strftime("%Y%m%d", nextDate))
+    let answer = inputdialog(
+                \substitute(system('cal -3w'),
+                \ '[^\ A-Za-z0-9\n]', '', 'g'
+                \) . "\nEnter the meeting date (YYYYMMDD): ",
+                \ strftime("%Y%m%d", nextDate)
+                \)
 
-    return strftime("%a %b %d, %Y", strptime("%Y%m%d", answer))
+    if empty(answer)
+        return ""
+    else
+        return strftime("%a %b %d, %Y", strptime("%Y%m%d", answer))
+    endif
 endfunction
 
 "Execute the Fugitive's G command and passing accepted GIT's commands, open its
