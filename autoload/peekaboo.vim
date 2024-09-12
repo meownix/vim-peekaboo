@@ -110,7 +110,7 @@ function! peekaboo#printStdDateOfSpecificDate()
         let nextDate = nextDate + 24 * 60 * 60
     endwhile
 
-    let answer = input(substitute(system('cal -3'), '[^\ A-Za-z0-9\n]', '', 'g') . "\n
+    let answer = input(substitute(system('cal -3w'), '[^\ A-Za-z0-9\n]', '', 'g') . "\n
                 \Enter the meeting date (YYYYMMDD): ", strftime("%Y%m%d", nextDate))
 
     return strftime("%a %b %d, %Y", strptime("%Y%m%d", answer))
