@@ -150,7 +150,7 @@ function! peekaboo#storeGitLogFilename()
 endfunction
 
 function! peekaboo#restoreGitLogInNewTab()
-    if !empty(s:gitLogFilename)
+    if !empty(s:gitLogFilename) && filereadable(s:gitLogFilename)
         silent! exe "tabe " . expand(s:gitLogFilename)
     endif
 endfunction
@@ -175,5 +175,22 @@ function! peekaboo#newDiary()
         silent! exec ":e " . thePath . "/" . theFilename
     else
         echo "Peekaboo cannot generate Vimwiki Extended Diary without Vimwiki."
+    endif
+endfunction
+
+function! peekaboo#renumberVimwikiTableList()
+    if getline('.') =~ '^|\s*[0-9]*\.\s*|'
+        let currentLine = line('.')
+        let currentColumn = col('.')
+        exec "?^|\ *--"
+        exec "noh"
+        exec "normal! jf "
+        exec "normal! \<C-v>}kt|"
+        exec "normal! c1."
+        exec "normal! j\<c-v>}kt|g\<c-a>"
+        exec "VimwikiTableAlignW"
+        call cursor(currentLine, currentColumn)
+    else
+        echo "Move cursor to any row of a table that has point number."
     endif
 endfunction

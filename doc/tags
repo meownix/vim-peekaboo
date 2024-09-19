@@ -1,9 +1,11 @@
 :PD	peekaboo.txt	/*:PD*
 :PG	peekaboo.txt	/*:PG*
+:PLR	peekaboo.txt	/*:PLR*
 :PND	peekaboo.txt	/*:PND*
 :PeekabooDiff	peekaboo.txt	/*:PeekabooDiff*
 :PeekabooG	peekaboo.txt	/*:PeekabooG*
 :PeekabooNewDiary	peekaboo.txt	/*:PeekabooNewDiary*
+:PeekabooRenumberTableList	peekaboo.txt	/*:PeekabooRenumberTableList*
 peekaboo	peekaboo.txt	/*peekaboo*
 peekaboo-commands	peekaboo.txt	/*peekaboo-commands*
 peekaboo-intro	peekaboo.txt	/*peekaboo-intro*
@@ -17,6 +19,7 @@ peekaboo_<F8>	peekaboo.txt	/*peekaboo_<F8>*
 peekaboo_<F9>	peekaboo.txt	/*peekaboo_<F9>*
 peekaboo_<leader>TT	peekaboo.txt	/*peekaboo_<leader>TT*
 peekaboo_<leader>em	peekaboo.txt	/*peekaboo_<leader>em*
+peekaboo_<leader>lr	peekaboo.txt	/*peekaboo_<leader>lr*
 peekaboo_<leader>nd	peekaboo.txt	/*peekaboo_<leader>nd*
 peekaboo_<leader>rts	peekaboo.txt	/*peekaboo_<leader>rts*
 peekaboo_<leader>td	peekaboo.txt	/*peekaboo_<leader>td*

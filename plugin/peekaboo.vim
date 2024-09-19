@@ -135,6 +135,8 @@ nnoremap <f10> :call peekaboo#closeDiffWinsAndRestoreGitLog()<cr>
 nnoremap <silent><leader>vm :set concealcursor=nvic<cr>
 nnoremap <silent><leader>em :set concealcursor=<cr>
 
+nnoremap <silent><leader>lr :call peekaboo#renumberVimwikiTableList()<cr>
+
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -151,3 +153,6 @@ command! -nargs=* PG call peekaboo#fugitive(<q-args>)
 " Create a standardized MWiki's diary.
 command! PeekabooNewDiary call peekaboo#newDiary()
 command! PND call peekaboo#newDiary()
+
+command! PeekabooRenumberTableList call peekaboo#renumberVimwikiTableList()
+command! PLR call peekaboo#renumberVimwikiTableList()
