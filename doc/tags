@@ -2,10 +2,12 @@
 :PG	peekaboo.txt	/*:PG*
 :PLR	peekaboo.txt	/*:PLR*
 :PND	peekaboo.txt	/*:PND*
+:PTC	peekaboo.txt	/*:PTC*
 :PeekabooDiff	peekaboo.txt	/*:PeekabooDiff*
 :PeekabooG	peekaboo.txt	/*:PeekabooG*
 :PeekabooNewDiary	peekaboo.txt	/*:PeekabooNewDiary*
 :PeekabooRenumberTableList	peekaboo.txt	/*:PeekabooRenumberTableList*
+:PeekabooToogleColorColumn	peekaboo.txt	/*:PeekabooToogleColorColumn*
 peekaboo	peekaboo.txt	/*peekaboo*
 peekaboo-commands	peekaboo.txt	/*peekaboo-commands*
 peekaboo-intro	peekaboo.txt	/*peekaboo-intro*
@@ -22,6 +24,7 @@ peekaboo_<leader>em	peekaboo.txt	/*peekaboo_<leader>em*
 peekaboo_<leader>lr	peekaboo.txt	/*peekaboo_<leader>lr*
 peekaboo_<leader>nd	peekaboo.txt	/*peekaboo_<leader>nd*
 peekaboo_<leader>rts	peekaboo.txt	/*peekaboo_<leader>rts*
+peekaboo_<leader>tc	peekaboo.txt	/*peekaboo_<leader>tc*
 peekaboo_<leader>td	peekaboo.txt	/*peekaboo_<leader>td*
 peekaboo_<leader>tt	peekaboo.txt	/*peekaboo_<leader>tt*
 peekaboo_<leader>vm	peekaboo.txt	/*peekaboo_<leader>vm*

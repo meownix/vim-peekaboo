@@ -194,3 +194,11 @@ function! peekaboo#renumberVimwikiTableList()
         echo "Move cursor to any row of a table that has point number."
     endif
 endfunction
+
+function! peekaboo#toggleColorColumn()
+    if &colorcolumn == 0
+        set cc=80
+    else
+        set cc=0
+    endif
+endfunction

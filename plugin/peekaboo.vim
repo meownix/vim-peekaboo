@@ -137,6 +137,8 @@ nnoremap <silent><leader>em :set concealcursor=<cr>
 
 nnoremap <silent><leader>lr :call peekaboo#renumberVimwikiTableList()<cr>
 
+nnoremap <silent><leader>tc :call peekaboo#toggleColorColumn()<cr>
+
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -156,3 +158,6 @@ command! PND call peekaboo#newDiary()
 
 command! PeekabooRenumberTableList call peekaboo#renumberVimwikiTableList()
 command! PLR call peekaboo#renumberVimwikiTableList()
+
+command! PeekabooToogleColorColumn call peekaboo#toggleColorColumn()
+command! PTC call peekaboo#toggleColorColumn()
