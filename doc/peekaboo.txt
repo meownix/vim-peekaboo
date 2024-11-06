@@ -31,6 +31,10 @@ MAP                MODE
                           standardization full path for a new MWiki
                           documentation: `YYYY/MM/DD.N.$USER`.
 
+                                                         *peekaboo_<leader>Tt*
+<leader>Tt          n     Stands for Transform to Link. Convert a Vimwiki tag
+                          into Vimwiki Link. Work for title's tag only.
+
                                                          *peekaboo_<leader>TT*
 <leader>TT          ni    Stands for Touch Typing. Print the today's typing
                           practice record Vimwiki's link. Example:

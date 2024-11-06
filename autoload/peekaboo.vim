@@ -202,3 +202,22 @@ function! peekaboo#toggleColorColumn()
         set cc=0
     endif
 endfunction
+
+function! peekaboo#turnVimwikiTagToLink()
+    let currentFile = expand('%')
+    exec "normal! \<C-]>"
+    if currentFile != expand('%')
+        exec "normal! k"
+        let theTitle = substitute(getline('.'), '\s*=\s*', '', 'g')
+        let thePath = substitute(expand('%:p'), '^.*\/doc\(.*\)\.wiki$', '\1', '')
+        exec "normal! \<C-o>"
+        if !empty(theTitle)
+            let previous_tw=&tw
+            set tw=0
+            exec "normal! caw [[" . expand(thePath) . "|" . expand(theTitle) . "]]"
+            exec "set tw=" . expand(previous_tw)
+        else
+            echo "Currently only support for tag for MWiki's title."
+        endif
+    endif
+endfunction
