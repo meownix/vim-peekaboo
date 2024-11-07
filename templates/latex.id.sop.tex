@@ -5,12 +5,23 @@
 \usepackage{tabularray}
 \usepackage{nameref} % Required package for using \nameref
 \usepackage{tcolorbox}
+\usepackage{background}
 \title{Judul SOP}
 \revisiondate{Fri Nov 01, 2024}
 \revision{0}
 \soinumber{NPL-SOP-20-IS-XXXXXX-X}
 
 \begin{document}
+    \SetBgContents{}
+    % Set up the background text
+    \backgroundsetup{
+      scale=7,              % Scale the text
+      color=red,            % Color of the text
+      opacity=0.15,         % Opacity of the text
+      position={1.2, -1.5}, % Positioning
+      contents=DRAFT        % The text to display
+    }
+
     \maketitle
 
     \begin{table}
