@@ -1,0 +1,148 @@
+\documentclass[12pt]{soi_v2}
+\usepackage{amsmath} % for \text
+\usepackage{longtable} % Required for the longtable environment
+\usepackage{float}
+\usepackage{tabularray}
+\usepackage{nameref} % Required package for using \nameref
+\usepackage{tcolorbox}
+% \hspace{...} bisa dibuang atau diadjust angkanya untuk membuat kotak "header"
+% yang dihasilkan kurang lebih tulisannya centered dan lebar keseluruhan
+% kotak-nya memenuhi lebar dokumen.
+\title{SOI Name}
+\revisiondate{Fri Nov 01, 2024}
+\revision{0}
+\soinumber{NPL-SOI-20-IS-XXXXXX-X}
+
+\begin{document}
+    \maketitle
+
+    \begin{table}
+        \centering
+        \small % make the font smaller
+        \begin{tblr}{
+          stretch=1.5,
+          row{1} = {p},
+          cell{1}{1} = {r=2}{1.5cm}, % Pengaturan lebar kolom pertama (Tanda Tangan)
+          cell{2}{2} = {4.5cm}, % Pengaturan lebar kolom Disusun
+          cell{2}{3} = {5cm},   % Pengaturan lebar kolom Diperiksa
+          cell{2}{4} = {4.5cm}, % Pengaturan lebar kolom Disetujui
+          hlines, vlines % add borders to all cells
+        }
+        Signature & \textbf{Prepared by} & \textbf{Checked by} & \textbf{Approved by} \\
+                        & {\\ \\ \\ \\}       &                    & \\
+        Date         &                     &                    & \\
+        Title         & QA Supervisor & {System Integration Coordinator} & Group MIS Manager  \\
+        Name            & Rafid M. Salahudin & Binto Widodo Pramono              & Eddy Chandra
+        \end{tblr}
+    \end{table}
+
+    \section*{FORM OF CHANGE:}
+
+    \textit{Not available (New SOI)}
+
+    \section*{REASON FOR CHANGE:}
+
+    \textit{Not available (New SOI)}
+
+    \section*{CURRENT TRANSITION ACTIONS:}
+
+    \textit{Not available (New SOI)}
+
+    \section*{DISTRIBUTION:}
+
+    \begin{longtable}{|c|p{1.5cm}|p{4cm}|c|p{1.5cm}|p{4cm}|}
+        \hline
+        \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} \\ \hline
+        \endfirsthead
+        \multicolumn{6}{c}%
+        {{\bfseries continued from previous page}} \\
+        \hline
+        \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} \\ \hline
+        \endhead
+        \hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+        \endfoot
+        \hline
+        \endlastfoot
+        \#1 & SI & System Integration & & & \\ \hline
+        \#2 & SD & Software Development & & & \\ \hline
+        \#3 & IF & Infrastructure & & & \\ \hline
+        \#4 & BOD & Board Of Director & & & \\ \hline
+        \#5 & ... & ... & & & \\ \hline
+    \end{longtable}
+
+    \newpage
+
+    \section*{HISTORY OF CHANGES}
+
+    \begin{longtable}{|c|c|p{11.7cm}|}
+        \hline
+        \textbf{DATE} & \textbf{REVISION} & \textbf{DESCRIPTION OF CHANGES} \\ \hline
+        \endfirsthead
+        \multicolumn{3}{c}%
+        {{\bfseries continued from previous page}} \\
+        \hline
+        \textbf{DATE} & \textbf{REVISION} & \textbf{DESCRIPTION OF CHANGES} \\ \hline
+        \endhead
+        \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
+        \endfoot
+        \hline
+        \endlastfoot
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+                   &   &            \\ \hline
+    \end{longtable}
+
+    \newpage
+
+    \section{PURPOSE}
+
+    \section{SCOPE}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{REFERENCE}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{DEFINITION}
+    \begin{enumerate}
+        \item \textbf{bla3x1:} Adalah blablabla satu.
+        \item \textbf{bla3x2:} Adalah blablabla dua.
+    \end{enumerate}
+
+    \section{RESPONSIBILITIES}
+    \begin{enumerate}
+        \item ...
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+        \item ...
+    \end{enumerate}
+
+    \section{PREPARATION}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{WORK PROCEDURE}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{EXCEPTION}
+    \section{QUALITY RECORD}
+    \section{ATTACHMENT}
+\end{document}
