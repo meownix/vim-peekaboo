@@ -63,12 +63,12 @@ endfunction
 
 augroup peekabooAutoLoadTemplates
     au!
-    autocmd BufNewFile *.html exec '0r ' . s:peekaboo_template_dir . 'page.html'
-    autocmd BufNewFile *.sh exec '0r ' . s:peekaboo_template_dir . 'script.sh'
-    autocmd BufNewFile *.zsh exec '0r ' . s:peekaboo_template_dir . 'script.zsh'
-    autocmd BufNewFile *.sop.tex exec '0r ' . s:peekaboo_template_dir . 'latex.sop.tex'
-    autocmd BufNewFile *.soi.tex exec '0r ' . s:peekaboo_template_dir . 'latex.soi.tex'
-    autocmd BufNewFile *.mom.tex exec '0r ' . s:peekaboo_template_dir . 'latex.mom.tex'
+    autocmd BufNewFile *.html exec '0r ' . s:peekaboo_template_dir . 'page.html|normal! Gddgg'
+    autocmd BufNewFile *.sh exec '0r ' . s:peekaboo_template_dir . 'script.sh|normal! Gddgg'
+    autocmd BufNewFile *.zsh exec '0r ' . s:peekaboo_template_dir . 'script.zsh|normal! Gddgg'
+    autocmd BufNewFile *.sop.tex exec '0r ' . s:peekaboo_template_dir . 'latex.sop.tex|normal! Gddgg'
+    autocmd BufNewFile *.soi.tex exec '0r ' . s:peekaboo_template_dir . 'latex.soi.tex|normal! Gddgg'
+    autocmd BufNewFile *.mom.tex exec '0r ' . s:peekaboo_template_dir . 'latex.mom.tex|normal! Gddgg'
     autocmd BufNewFile **/mom/**/*.wiki call peekaboo#GenerateMOMTemplate()
     autocmd BufNewFile *.wiki call s:PeekabooGenerateNewVwkDiaryFileTitle()
 augroup END
