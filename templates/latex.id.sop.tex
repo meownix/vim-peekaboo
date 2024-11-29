@@ -8,7 +8,7 @@
 \usepackage{background}
 \usepackage{hyperref}
 \title{Judul SOP}
-\revisiondate{29-11-2024}
+\revisiondate{29 November 2024}
 \revision{0}
 \soinumber{NPL-SOP-MIS-XXX-00-11.2024}
 
@@ -22,6 +22,31 @@
       position={1.2, -1.5}, % Positioning
       contents=DRAFT        % The text to display
     }
+    % ========================================
+    % Saat sudah siap untuk proses pengesahan:
+    % ----------------------------------------
+    % 1. Comment, dengan menyisipkan % pada block \backgroundsetup{ s/d } di
+    %    atas. Dengan editor VIM, cara-nya sebagai berikut:
+    %     a) Saat di mode NORMAL, arahkan kursor ke posisi \ pada
+    %        \backgroundsetup{ di atas.
+    %     b) Tekan CTRL+v, lalu tekan j beberapa kali hingga kursor sampai pada
+    %        posisi } yang sejajar dengan \ di bawah-nya.
+    %     c) Shift+i, ketik %, dan lanjutkan dengan tekan Escape.
+    % 2. Hapus % block \backgroundsetup{ s/d } di bawah. Dengan editor VIM,
+    %    cara-nya sebagai berikut:
+    %     a) Saat di mode NORMAL, arahkan kursor ke ke posisi \ pada
+    %        \backgroundsetup{ di bawah.
+    %     b) Tekan CTRL+v, lalu tekan j beberapa kali hingga kursor sampai pada
+    %        posisi } yang sejajar dengan \ di bawah-nya.
+    %     c) Tekan d.
+    %
+    %\backgroundsetup{
+    %  scale=5,              % Scale the text
+    %  color=red,            % Color of the text
+    %  opacity=0.15,         % Opacity of the text
+    %  position={1.7, -2}, % Positioning
+    %  contents=CONFIDENTIAL % The text to display
+    %}
 
     \maketitle
 
