@@ -10,6 +10,10 @@ if &cp || exists("g:peekaboo_loaded") && g:peekaboo_loaded
     finish
 endif
 
+if !exists("g:peekaboo_sop_tex_company_logo_path")
+    let g:peekaboo_sop_tex_company_logo_path=$HOME . "/texmf/tex/latex/img/"
+endif
+
 let g:peekaboo_loaded = 1
 
 let s:peekaboo_template_dir = expand('<sfile>:p:h') . '/../templates/'
@@ -66,8 +70,8 @@ augroup peekabooAutoLoadTemplates
     autocmd BufNewFile *.html exec '0r ' . s:peekaboo_template_dir . 'page.html|normal! Gddgg'
     autocmd BufNewFile *.sh exec '0r ' . s:peekaboo_template_dir . 'script.sh|normal! Gddgg'
     autocmd BufNewFile *.zsh exec '0r ' . s:peekaboo_template_dir . 'script.zsh|normal! Gddgg'
-    autocmd BufNewFile *.id.sop.tex exec '0r ' . s:peekaboo_template_dir . 'latex.id.sop.tex|normal! Gddgg'
-    autocmd BufNewFile *.id.soi.tex exec '0r ' . s:peekaboo_template_dir . 'latex.id.soi.tex|normal! Gddgg'
+    autocmd BufNewFile *.id.sop.tex call peekaboo#GenerateTexTemplate('latex.id.sop.tex')
+    autocmd BufNewFile *.id.soi.tex call peekaboo#GenerateTexTemplate('latex.id.soi.tex')
     autocmd BufNewFile *.en.sop.tex exec '0r ' . s:peekaboo_template_dir . 'latex.en.sop.tex|normal! Gddgg'
     autocmd BufNewFile *.en.soi.tex exec '0r ' . s:peekaboo_template_dir . 'latex.en.soi.tex|normal! Gddgg'
     autocmd BufNewFile *.mom.tex exec '0r ' . s:peekaboo_template_dir . 'latex.mom.tex|normal! Gddgg'
