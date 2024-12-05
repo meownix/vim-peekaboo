@@ -50,8 +50,6 @@
     %  contents=CONFIDENTIAL % The text to display
     %}
 
-    \maketitle
-
     \begin{table}
         \centering
         \small % make the font smaller
@@ -60,7 +58,7 @@
           cell{1}{3}     = {c=2}{},      % Baris 1 kolom 3 = Span 2 kolom lebar flexibel.
           cell{1}{5}     = {c=2}{},      % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
           cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
-          cell{4-5}{2-6} = {2.62cm},     % Pengaturan lebar kolom 2-4 pada baris 4-5.
+          cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-4 pada baris 4-5.
           row{4-5}       = {l},
           row{2}         = {2cm},        % Pengaturan tinggi baris kedua
           hlines, vlines             % add borders to all cells
@@ -89,24 +87,20 @@
 
     \section*{DISTRIBUSI:}
 
-    \begin{longtable}{|c|p{1.5cm}|p{4cm}|c|p{1.5cm}|p{4cm}|}
+    \begin{longtable}{|c|p{1.5cm}|p{3.6cm}|c|p{1.5cm}|p{3.6cm}|}
         \hline
         \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\ \hline
         \endfirsthead
         \multicolumn{6}{c}%
-        {{\bfseries continued from previous page}} \\
+        {{\bfseries Lanjutan dari tabel Distribusi halaman sebelumnya}} \\
         \hline
         \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\ \hline
         \endhead
-        \hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+        \hline \multicolumn{6}{|r|}{{Bersambung pada halaman berikut-nya}} \\ \hline
         \endfoot
         \hline
         \endlastfoot
-        \#1 & SI & System Integration & & & \\ \hline
-        \#2 & SD & Software Development & & & \\ \hline
-        \#3 & IF & Infrastructure & & & \\ \hline
-        \#4 & BOD & Board Of Director & & & \\ \hline
-        \#5 & ... & ... & & & \\ \hline
+        \#11 & MIS & Management Information System & & & \\ \hline
     \end{longtable}
 
     \newpage
