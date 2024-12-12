@@ -130,12 +130,14 @@ inoremap <f6> <C-R>=peekaboo#printStdDateOfSpecificDate()<CR>
 
 "[Load Buffer Number] Load previously saved buffer number.
 nnoremap <f8> :call peekaboo#restoreGitLogInNewTab()<cr>
+nnoremap <silent><leader>rll :call peekaboo#restoreGitLogInNewTab()<cr>
 
 " Default keybinding for PeekabooJournal command.
 nnoremap <f9> :PND<cr>
 
 "Buffer Wipeout Diff.
 nnoremap <f10> :call peekaboo#closeDiffWinsAndRestoreGitLog()<cr>
+nnoremap <silent><leader>bwd :call peekaboo#closeDiffWinsAndRestoreGitLog()<cr>
 
 " View and edit mode for Vimwiki file
 nnoremap <silent><leader>vm :set concealcursor=nvic<cr>

@@ -57,7 +57,7 @@ MAP                MODE
                           keybinding mentioned above.
 
                                                                *peekaboo_<F8>*
-<F8>                n     Re-open the last Fugitive git log result in new tab.
+<leader>rll, <F8>   n     Re-open the last Fugitive git log result in new tab.
 
                                                                *peekaboo_<F9>*
 <F9>                n     Stands for Peekaboo New Diary. This is the default
@@ -68,7 +68,7 @@ MAP                MODE
                           naming convention: `YYYY-MM-DD.N.$USER.wiki`.
 
                                                               *peekaboo_<F10>*
-<F10>               n     Wipe out the vimdiff buffers. This is designed to
+<leader>bwd, <F10>  n     Wipe out the vimdiff buffers. This is designed to
 			  close the side-by-side diff windows created by
 			  Fugitive and wipe the buffers.
 
