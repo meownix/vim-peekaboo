@@ -37,7 +37,7 @@ function! peekaboo#GenerateTexTemplate(templateFile)
     if filereadable(logoFile)
         exec "%s/logo\.png/" . companyId . "\.png/g"
         exec "%s/NPL-/" . toupper(companyId) . "-/g"
-        exec "%s/-MM.YYYY/-" . strftime("%m.%Y", localtime()) . "/g"
+        exec "%s/-MM-YYYY/-" . strftime("%m-%Y", localtime()) . "/g"
     endif
 
     exec "normal! Gddgg"
