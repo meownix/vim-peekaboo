@@ -1,4 +1,4 @@
-\documentclass[12pt]{soi_v2}
+\documentclass[12pt]{sop}
 \usepackage{amsmath} % for \text
 \usepackage{longtable} % Required for the longtable environment
 \usepackage{float}
@@ -7,10 +7,12 @@
 \usepackage{tcolorbox}
 \usepackage{background}
 \usepackage{hyperref}
-\title{SOP Name}
-\revisiondate{Fri Nov 01, 2024}
+\title{SOP Title}
+\revisiondate{29 November 2024}
 \revision{0}
-\soinumber{NPL-SOP-20-IS-XXXXXX-X}
+\soinumber{NPL-SOP-MIS-XXX-00-MM-YYYY}
+
+\renewcommand{\theLogoValue}{logo.png}
 
 \begin{document}
     \SetBgContents{}
@@ -22,27 +24,52 @@
       position={1.2, -1.5}, % Positioning
       contents=DRAFT        % The text to display
     }
-
-    \maketitle
+    % ========================================
+    % Saat sudah siap untuk proses pengesahan:
+    % ----------------------------------------
+    % 1. Comment, dengan menyisipkan % pada block \backgroundsetup{ s/d } di
+    %    atas. Dengan editor VIM, cara-nya sebagai berikut:
+    %     a) Saat di mode NORMAL, arahkan kursor ke posisi \ pada
+    %        \backgroundsetup{ di atas.
+    %     b) Tekan CTRL+v, lalu tekan j beberapa kali hingga kursor sampai pada
+    %        posisi } yang sejajar dengan \ di bawah-nya.
+    %     c) Shift+i, ketik %, dan lanjutkan dengan tekan Escape.
+    % 2. Hapus % block \backgroundsetup{ s/d } di bawah. Dengan editor VIM,
+    %    cara-nya sebagai berikut:
+    %     a) Saat di mode NORMAL, arahkan kursor ke ke posisi \ pada
+    %        \backgroundsetup{ di bawah.
+    %     b) Tekan CTRL+v, lalu tekan j beberapa kali hingga kursor sampai pada
+    %        posisi } yang sejajar dengan \ di bawah-nya.
+    %     c) Tekan d.
+    %
+    %\backgroundsetup{
+    %  scale=5,              % Scale the text
+    %  color=red,            % Color of the text
+    %  opacity=0.15,         % Opacity of the text
+    %  position={1.7, -2}, % Positioning
+    %  contents=CONFIDENTIAL % The text to display
+    %}
 
     \begin{table}
         \centering
         \small % make the font smaller
         \begin{tblr}{
-          stretch=1.5,
-          row{1} = {p},
-          cell{1}{1} = {r=2}{1.5cm}, % Pengaturan lebar kolom pertama (Tanda Tangan)
-          cell{2}{2} = {4.5cm},      % Pengaturan lebar kolom Disusun
-          cell{2}{3} = {5cm},        % Pengaturan lebar kolom Diperiksa
-          cell{2}{4} = {4.5cm},      % Pengaturan lebar kolom Disetujui
-          row{2} = {2cm},            % Pengaturan tinggi baris kedua
+          cell{1}{2-6}   = {c},
+          cell{1}{3}     = {c=2}{},      % Baris 1 kolom 3 = Span 2 kolom lebar flexibel.
+          cell{1}{5}     = {c=2}{},      % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
+          cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+          cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-4 pada baris 4-5.
+          row{4-5}       = {l},
+          row{2}         = {2cm},        % Pengaturan tinggi baris kedua
           hlines, vlines             % add borders to all cells
         }
-        Signature & \textbf{Prepared by} & \textbf{Checked by} & \textbf{Approved by} \\
-                        &        &                    & \\
-        Tanggal         &        &                    & \\
-        Jabatan         & QA Supervisor & {System Integration Coordinator} & Group MIS Manager  \\
-        Nama            & Rafid M. Salahudin & Binto Widodo Pramono              & Eddy Chandra
+        Signature & \textbf{Created}   & \textbf{Reviewed}              &                                         & \textbf{Approved}  & \\
+                  &                    &                                &                                         &                    & \\
+        Date      &                    &                                &                                         &                    & \\
+        Title     & QA Supervisor      & System Integration Coordinator & Assc. Group Infrastruktur \& TS Manager & Group MIS Manager  & Director \\
+        Name      & Rafid M. Salahudin & Binto Widodo Pramono           & Richard Stefano Ricci                   & Eddy Chandra       & Roy Lembong
+       %Jabatan         & QA Supervisor      & Software Development Manager   & Software Development Manager            & Group MIS Manager  & Director \\
+       %Nama            & Rafid M. Salahudin & Ahmad Taufiq                   & Yandi Prabowo Jamanumpak                & Eddy Chandra       & Roy Lembong
         \end{tblr}
     \end{table}
 
@@ -50,34 +77,30 @@
 
     \textit{Not available (New SOP)}
 
-    \section*{REASON FOR CHANGE:}
+    \section*{REASONS FOR CHANGE:}
 
     \textit{Not available (New SOP)}
 
-    \section*{CURRENT TRANSITION ACTIONS:}
+    \section*{TRANSITION ACTIONS:}
 
     \textit{Not available (New SOP)}
 
     \section*{DISTRIBUTION:}
 
-    \begin{longtable}{|c|p{1.5cm}|p{4cm}|c|p{1.5cm}|p{4cm}|}
+    \begin{longtable}{|c|p{1.5cm}|p{3.6cm}|c|p{1.5cm}|p{3.6cm}|}
         \hline
-        \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} \\ \hline
+        \textbf{COPY} & \textbf{DEPT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPT} & \textbf{DESCRIPTION} \\ \hline
         \endfirsthead
         \multicolumn{6}{c}%
-        {{\bfseries continued from previous page}} \\
+        {{\bfseries Continuation from Distribution table from previous page}} \\
         \hline
-        \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPARTMENT} & \textbf{DESCRIPTION} \\ \hline
+        \textbf{COPY} & \textbf{DEPT} & \textbf{DESCRIPTION} & \textbf{COPY} & \textbf{DEPT} & \textbf{DESCRIPTION} \\ \hline
         \endhead
-        \hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+        \hline \multicolumn{6}{|r|}{{Continue to the next page}} \\ \hline
         \endfoot
         \hline
         \endlastfoot
-        \#1 & SI & System Integration & & & \\ \hline
-        \#2 & SD & Software Development & & & \\ \hline
-        \#3 & IF & Infrastructure & & & \\ \hline
-        \#4 & BOD & Board Of Director & & & \\ \hline
-        \#5 & ... & ... & & & \\ \hline
+        \#11 & MIS & Management Information System & & & \\ \hline
     \end{longtable}
 
     \newpage
@@ -89,11 +112,11 @@
         \textbf{DATE} & \textbf{REVISION} & \textbf{DESCRIPTION OF CHANGES} \\ \hline
         \endfirsthead
         \multicolumn{3}{c}%
-        {{\bfseries continued from previous page}} \\
+        {{\bfseries Continuation from the previous page}} \\
         \hline
         \textbf{DATE} & \textbf{REVISION} & \textbf{DESCRIPTION OF CHANGES} \\ \hline
         \endhead
-        \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
+        \hline \multicolumn{3}{|r|}{{Continue to the next page}} \\ \hline
         \endfoot
         \hline
         \endlastfoot
@@ -125,10 +148,18 @@
     \end{enumerate}
 
     \section{DEFINITION}
-    \begin{enumerate}
-        \item \textbf{bla3x1:} Adalah blablabla satu.
-        \item \textbf{bla3x2:} Adalah blablabla dua.
-    \end{enumerate}
+    \begin{longtable}{c p{2cm} c p{12.7cm}}
+        \textbullet & \textbf{...} & : & ...\\
+        \textbullet & \textbf{...} & : & ...\\
+        \textbullet & \textbf{...} & : & ...\\
+    \end{longtable}
+
+    \section{ABBREVIATIONS}
+    \begin{longtable}{c p{2cm} c p{12.7cm}}
+        \textbullet & \textbf{...} & : & ...\\
+        \textbullet & \textbf{...} & : & ...\\
+        \textbullet & \textbf{...} & : & ...\\
+    \end{longtable}
 
     \section{GENERAL PROVISIONS}
     \begin{enumerate}
@@ -143,6 +174,6 @@
     \end{enumerate}
 
     \section{EXCEPTION}
-    \section{QUALITY RECORD}
+    \section{FLOWCHART}
     \section{ATTACHMENT}
 \end{document}
