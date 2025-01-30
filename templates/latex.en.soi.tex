@@ -14,6 +14,19 @@
 
 \renewcommand{\theLogoValue}{logo.png}
 
+% ---------------------------------------------------------------------------
+% CUSTOM HYPHENATION
+% ---------------------------------------------------------------------------
+% Silahkan tambahkan custom pemenggalan kata  di dalam \hyphenation di bawah
+% ini bila menemukan ada pemenggalan kata pada generated .pdf file yang salah
+% di SOP/I ini.
+% ---------------------------------------------------------------------------
+\hyphenation{
+    pe-ngen-da-li
+    pe-mang-ka-san
+}
+% ---------------------------------------------------------------------------
+
 \begin{document}
     \SetBgContents{}
     % Set up the background text
@@ -54,34 +67,72 @@
         \centering
         \small % make the font smaller
         \begin{tblr}{
-          cell{1}{2-6}   = {c},
-          cell{1}{3}     = {c=2}{},      % Baris 1 kolom 3 = Span 2 kolom lebar flexibel.
-          cell{1}{5}     = {c=2}{},      % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
-          cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
-          cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-4 pada baris 4-5.
-          row{4-5}       = {l},
-          row{2}         = {2cm},        % Pengaturan tinggi baris kedua
-          hlines, vlines                 % add borders to all cells
-        }
-        Signature    & \textbf{Created}                  & \textbf{Reviewed}                        &                              & \textbf{Approved}            & \\
-                     &                                   &                                          &                              &                              & \\
-        Date         &                                   &                                          &                              &                              & \\
-        Title        &                                   &                                          & QA Supervisor                & Business Improvement Manager & Group MIS Manager \\
-        Name         &                                   &                                          & Rafid M. Salahudin           & Devina Nur Wulan             & Eddy Chandra
+                cell{1}{2-6}   = {c},
+                cell{1}{3}     = {c=4}{},      % Baris 1 kolom 3 = Span 4 kolom lebar flexibel.
+                cell{1}{5}     = {c=2}{},      % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
+                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
+                row{4-5}       = {l},
+                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                 % add borders to all cells
+            }
+            Tanda Tangan    & \textbf{Created}                  & \textbf{Reviewed}                       &                              &                              & \\
+                            &                                   &                                          &                              &                              & \\
+            Tanggal         &                                   &                                          &                              &                              &  \\
+            Jabatan         & QA Supervisor                     & Programmer Supervisor                    & Programmer Supervisor        & Programmer Supervisor        & Programmer Supervisor \\
+            Nama            & Rafid M. Salahudin                & Mf Sucianto                              & Mansur                       & Azika Syahputra Azwar        & Bima Samudra
+        \end{tblr}
+    \end{table}
+
+    \begin{table}
+        \centering
+        \small % make the font smaller
+        \begin{tblr}{
+                cell{1}{2-6}   = {c},
+                cell{1}{2}     = {c=5}{},
+                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
+                row{4-5}       = {l},
+                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                 % add borders to all cells
+            }
+            Tanda Tangan    & \textbf{Reviewed}                &                                &                           &                                & \\
+                            &                                   &                                &                           &                                & \\
+            Tanggal         &                                   &                                &                           &                                &  \\
+            Jabatan         & Technical Support Supervisor      & System Integrator Coordinator  & SoftDev assc. Manager     & Infra Assc. \& TS Manager      & Infra Assc. \& TS Manager \\
+            Nama            & Burhanudin Zali                   & Binto Widodo                   & Prabu Karana              & Muhammad Nur Alam              & Muhammad Azharuddin
+        \end{tblr}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \small % make the font smaller
+        \begin{tblr}{
+                cell{1}{2-5}   = {c},
+                cell{1}{2}     = {c=3}{},      % Baris 1 kolom 2 = Span 3 kolom lebar flexibel.
+                cell{1}{6}     = {c=2}{},      % Baris 1 kolom 6 = Span 2 kolom lebar flexibel.
+                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-5} = {3.190cm},    % Pengaturan lebar kolom 2-5 pada baris 4-5 = 3.19cm.
+                row{4-5}       = {l},
+                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                 % add borders to all cells
+            }
+            Tanda Tangan    & \textbf{Reviewed}                &                                  &                                  & \textbf{Disetujui} \\
+                            &                                   &                                  &                                  & \\
+            Tanggal         &                                   &                                  &                                  & \\
+            Jabatan         & Softdev Manager                   & Softdev Manager                  & Assc.Group Infra \& TS Manager   & Group MIS Manager \\
+            Nama            & Yandi Prabowo                     & Ahmad Taufiq                     & Richard Stefano Ricci            & Eddy Chandra
         \end{tblr}
     \end{table}
 
     \section*{FORM OF CHANGE:}
-
-    \textit{Not available (New SOI)}
+    \texttt{-}
 
     \section*{REASONS FOR CHANGE:}
-
-    \textit{Not available (New SOI)}
+    \texttt{-}
 
     \section*{TRANSITION ACTIONS:}
-
-    \textit{Not available (New SOI)}
+    \texttt{-}
 
     \section*{DISTRIBUTION:}
 
@@ -118,15 +169,13 @@
         \endfoot
         \hline
         \endlastfoot
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
-                   &   &            \\ \hline
+        &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline
+        % NOTE:
+        % Setiap ada menambahkan baris baru, cek kembali pada file pdf yang
+        % dihasilkan pada halaman SEJARAH PERUBAHAN untuk memastikan longtable tidak
+        % span ke halaman berikutnya bila pada bagian bawah tabel tersebut masih
+        % adalah berupa baris-baris kosong. Bila hal tersebut terjadi, maka kurangi
+        % jumlah &&\\\hline di atas.
     \end{longtable}
 
     \newpage
