@@ -24,25 +24,6 @@ function! peekaboo#log(msg)
     endif
 endfunc
 
-function! peekaboo#GenerateTexTemplate(templateFile)
-    exec '0r ' . s:peekaboo_template_dir . a:templateFile
-
-    let companyId = matchstr(expand('%:t'), '\.\zs[^.]*\ze\.')
-
-    let logoFile = g:peekaboo_sop_tex_company_logo_path .
-                \companyId . ".png"
-
-    call writefile(["logoFile = " . logoFile], "/tmp/debug.log", "a")
-
-    if filereadable(logoFile)
-        exec "%s/logo\.png/" . companyId . "\.png/g"
-        exec "%s/NPL-/" . toupper(companyId) . "-/g"
-        exec "%s/-MM-YYYY/-" . strftime("%m-%Y", localtime()) . "/g"
-    endif
-
-    exec "normal! Gddgg"
-endfunction
-
 " Append the standardized MOM template to the current buffer and mark defined
 " placeholders to ease the process of replacing each placeholder with built-in
 " Vim motions.

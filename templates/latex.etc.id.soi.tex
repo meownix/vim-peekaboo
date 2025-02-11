@@ -1,4 +1,4 @@
-\documentclass[12pt]{npl.doc}
+\documentclass[12pt]{etc.doc}
 \usepackage{amsmath} % for \text
 \usepackage{longtable} % Required for the longtable environment
 \usepackage{float}
@@ -7,12 +7,12 @@
 \usepackage{tcolorbox}
 \usepackage{background}
 \usepackage{hyperref}
-\title{Judul SOP}
+\title{Judul SOI}
 \revisiondate{10 Februari 2025}
-\revision{0.0}
-\soinumber{NPL-SOP-20-IS-000000-0}
+\revision{00}
+\soinumber{ETC-SOI-xxx-xx-xxxx-00}
 
-\renewcommand{\theLogoValue}{npl.png}
+\renewcommand{\theLogoValue}{etc.png}
 \renewcommand{\figurename}{Gambar} % Change "Figure" to "Gambar"
 
 % ---------------------------------------------------------------------------
@@ -80,8 +80,8 @@
             Tanda Tangan    & \textbf{Disusun}                  & \textbf{Diperiksa}                       &                              &                              & \\
                             &                                   &                                          &                              &                              & \\
             Tanggal         &                                   &                                          &                              &                              &  \\
-            Jabatan         & Infra Assc. \& TS Manager         & System Integrator Coordinator            & Infra Assc. \& TS Manager    & SoftDev assc. Manager        & Softdev Manager \\
-            Nama            & Muhammad Azharuddin               & Binto Widodo                             & Muhammad Nur Alam            & Prabu Karana                 & Yandi Prabowo
+            Jabatan         & QA Supervisor                     & Programmer Supervisor                    & Programmer Supervisor        & Programmer Supervisor        & Programmer Supervisor \\
+            Nama            & Rafid M. Salahudin                & Mf Sucianto                              & Mansur                       & Azika Syahputra Azwar        & Bima Samudra
         \end{tblr}
     \end{table}
 
@@ -90,19 +90,39 @@
         \small % make the font smaller
         \begin{tblr}{
                 cell{1}{2-6}   = {c},
-                cell{1}{2}     = {c=2}{},
-                cell{1}{4}     = {c=3}{},
+                cell{1}{2}     = {c=5}{},
                 cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
                 cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
                 row{4-5}       = {l},
                 row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
                 hlines, vlines                 % add borders to all cells
             }
-            Tanda Tangan    & \textbf{Diperiksa}                &                                & \textbf{Disetujui}           &                      & \\
-                            &                                   &                                &                              &                      & \\
-            Tanggal         &                                   &                                &                              &                      &  \\
-            Jabatan         & Softdev Manager                   & Assc.Group Infra \& TS Manager & Business Improvement Manager & Group MIS Manager    & Director \\
-            Nama            & Ahmad Taufiq                      & Richard Stefano Ricci          & Devina Nur Wulan             & Eddy Chandra         & Roy Lembong
+            Tanda Tangan    & \textbf{Diperiksa}                &                                &                           &                                & \\
+                            &                                   &                                &                           &                                & \\
+            Tanggal         &                                   &                                &                           &                                &  \\
+            Jabatan         & Technical Support Supervisor      & System Integrator Coordinator  & SoftDev assc. Manager     & Infra Assc. \& TS Manager      & Infra Assc. \& TS Manager \\
+            Nama            & Burhanudin Zali                   & Binto Widodo                   & Prabu Karana              & Muhammad Nur Alam              & Muhammad Azharuddin
+        \end{tblr}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \small % make the font smaller
+        \begin{tblr}{
+                cell{1}{2-5}   = {c},
+                cell{1}{2}     = {c=3}{},      % Baris 1 kolom 2 = Span 3 kolom lebar flexibel.
+                cell{1}{6}     = {c=2}{},      % Baris 1 kolom 6 = Span 2 kolom lebar flexibel.
+                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-5} = {3.190cm},    % Pengaturan lebar kolom 2-5 pada baris 4-5 = 3.19cm.
+                row{4-5}       = {l},
+                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                 % add borders to all cells
+            }
+            Tanda Tangan    & \textbf{Diperiksa}                &                                  &                                  & \textbf{Disetujui} \\
+                            &                                   &                                  &                                  & \\
+            Tanggal         &                                   &                                  &                                  & \\
+            Jabatan         & Softdev Manager                   & Softdev Manager                  & Assc.Group Infra \& TS Manager   & Group MIS Manager \\
+            Nama            & Yandi Prabowo                     & Ahmad Taufiq                     & Richard Stefano Ricci            & Eddy Chandra
         \end{tblr}
     \end{table}
 
@@ -135,6 +155,50 @@
 
     \newpage
 
+    \section{TUJUAN}
+
+    \section{RUANG LINGKUP}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{RUJUKAN}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{DEFINISI}
+    \begin{longtable}{r p{2cm} c p{12.7cm}}
+        4.1. & \textbf{...} & : & ...\\
+        4.2. & \textbf{...} & : & ...\\
+        4.3. & \textbf{...} & : & ...\\
+    \end{longtable}
+
+    \section{TANGGUNG JAWAB}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{PERSIAPAN}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{PROSEDUR}
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+
+    \section{CATATAN}
+
+    \newpage
+    \sopheader{ETC-SOI-xxx-xx-xxxx-SP}
+
     \section*{SEJARAH PERUBAHAN}
 
     \begin{longtable}{|c|c|p{11.7cm}|}
@@ -159,42 +223,7 @@
         % jumlah &&\\\hline di atas.
     \end{longtable}
 
-    \newpage
-
-    \section{TUJUAN}
-
-    \section{RUANG LINGKUP}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{RUJUKAN}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{DEFINISI}
-    \begin{longtable}{r p{2cm} c p{12.7cm}}
-        4.1. & \textit{...} & : & ...\\
-        4.2. & \textit{...} & : & ...\\
-        4.3. & \textit{...} & : & ...\\
-    \end{longtable}
-
-    \section{KETENTUAN UMUM}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{PROSEDUR DAN TANGGUNG JAWAB}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{PENGECUALIAN}
-    \section{REKAMAN MUTU}
-    \section{LAMPIRAN}
+    % Lampiran 01. Hapus remark bila ada lampiran
+    %\newpage
+    %\sopheader{ETC-SOI-xxx-xx-xxxx-01}
 \end{document}
