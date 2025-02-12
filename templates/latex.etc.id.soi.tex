@@ -201,26 +201,29 @@
 
     \section*{SEJARAH PERUBAHAN}
 
-    \begin{longtable}{|c|c|p{11.7cm}|}
+    \begin{longtable}{|c|c|r p{11.4cm}|}
+        % Bila setelah ada penambahan konten sejarah perubahan, kemungkinan lebar tabel ini akan berubah.
+        % Ubah ukuran kolom terakhir agar lebarnya sama dengan lebar heading SOP, misalnya menjadi dari 11.4cm
+        % menjadi 10.5cm.
         \hline
-        \textbf{TANGGAL} & \textbf{REVISI} & \textbf{URAIAN PERUBAHAN} \\ \hline
+        \textbf{TANGGAL} & \textbf{REVISI} & \multicolumn{2}{c|}{\textbf{URAIAN PERUBAHAN}} \\ \hline
         \endfirsthead
-        \multicolumn{3}{c}%
+        \multicolumn{4}{c}%
         {{\bfseries Lanjutan dari halaman sebelumnya}} \\
         \hline
-        \textbf{TANGGAL} & \textbf{REVISI} & \textbf{URAIAN PERUBAHAN} \\ \hline
+        \textbf{TANGGAL} & \textbf{REVISI} & \multicolumn{2}{c|}{\textbf{URAIAN PERUBAHAN}} \\ \hline
         \endhead
-        \hline \multicolumn{3}{|r|}{{Lanjut ke halaman berikutnya}} \\ \hline
+        \hline \multicolumn{4}{|r|}{{Lanjut ke halaman berikutnya}} \\ \hline
         \endfoot
         \hline
         \endlastfoot
-        &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline &&\\\hline
+        &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline
         % NOTE:
         % Setiap ada menambahkan baris baru, cek kembali pada file pdf yang
         % dihasilkan pada halaman SEJARAH PERUBAHAN untuk memastikan longtable tidak
         % span ke halaman berikutnya bila pada bagian bawah tabel tersebut masih
         % adalah berupa baris-baris kosong. Bila hal tersebut terjadi, maka kurangi
-        % jumlah &&\\\hline di atas.
+        % jumlah &&&\\\hline di atas.
     \end{longtable}
 
     % Lampiran 01. Hapus remark bila ada lampiran
