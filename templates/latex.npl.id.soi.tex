@@ -29,6 +29,7 @@
 % ---------------------------------------------------------------------------
 
 \begin{document}
+    \fontsize{10pt}{10pt}\selectfont
     \SetBgContents{}
     % Set up the background text
     \backgroundsetup{
@@ -64,18 +65,18 @@
     %  contents=CONFIDENTIAL % The text to display
     %}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \small % make the font smaller
         \begin{tblr}{
                 cell{1}{2-6}   = {c},
-                cell{1}{3}     = {c=4}{},      % Baris 1 kolom 3 = Span 4 kolom lebar flexibel.
-                cell{1}{5}     = {c=2}{},      % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
-                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
-                cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
+                cell{1}{3}     = {c=4}{},       % Baris 1 kolom 3 = Span 4 kolom lebar flexibel.
+                cell{1}{5}     = {c=2}{},       % Baris 1 kolom 5 = Span 2 kolom lebar flexibel.
+                cell{1}{1}     = {r=2}{1.75cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-6} = {2.55cm},      % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
                 row{4-5}       = {l},
-                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
-                hlines, vlines                 % add borders to all cells
+                row{2}         = {2cm},         % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                  % add borders to all cells
             }
             Tanda Tangan    & \textbf{Disusun}                  & \textbf{Diperiksa}                       &                              &                              & \\
                             &                                   &                                          &                              &                              & \\
@@ -85,17 +86,19 @@
         \end{tblr}
     \end{table}
 
-    \begin{table}
+    \vspace{-2em}
+
+    \begin{table}[H]
         \centering
         \small % make the font smaller
         \begin{tblr}{
                 cell{1}{2-6}   = {c},
                 cell{1}{2}     = {c=5}{},
-                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
-                cell{4-5}{2-6} = {2.47cm},     % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
+                cell{1}{1}     = {r=2}{1.75cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-6} = {2.55cm},      % Pengaturan lebar kolom 2-6 pada baris 4-5 = 2.47cm.
                 row{4-5}       = {l},
-                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
-                hlines, vlines                 % add borders to all cells
+                row{2}         = {2cm},         % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                  % add borders to all cells
             }
             Tanda Tangan    & \textbf{Diperiksa}                &                                &                           &                                & \\
                             &                                   &                                &                           &                                & \\
@@ -105,18 +108,20 @@
         \end{tblr}
     \end{table}
 
+    \vspace{-2em}
+
     \begin{table}[H]
         \centering
         \small % make the font smaller
         \begin{tblr}{
                 cell{1}{2-5}   = {c},
-                cell{1}{2}     = {c=3}{},      % Baris 1 kolom 2 = Span 3 kolom lebar flexibel.
-                cell{1}{6}     = {c=2}{},      % Baris 1 kolom 6 = Span 2 kolom lebar flexibel.
-                cell{1}{1}     = {r=2}{1.5cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
-                cell{4-5}{2-5} = {3.190cm},    % Pengaturan lebar kolom 2-5 pada baris 4-5 = 3.19cm.
+                cell{1}{2}     = {c=3}{},       % Baris 1 kolom 2 = Span 3 kolom lebar flexibel.
+                cell{1}{6}     = {c=2}{},       % Baris 1 kolom 6 = Span 2 kolom lebar flexibel.
+                cell{1}{1}     = {r=2}{1.75cm}, % Baris 1 kolom 1 = Span 2 baris, lebar 1.5cm.
+                cell{4-5}{2-5} = {3.3cm},       % Pengaturan lebar kolom 2-5 pada baris 4-5 = 3.19cm.
                 row{4-5}       = {l},
-                row{2}         = {2cm},        % Pengaturan tinggi baris kedua = 2cm.
-                hlines, vlines                 % add borders to all cells
+                row{2}         = {2cm},         % Pengaturan tinggi baris kedua = 2cm.
+                hlines, vlines                  % add borders to all cells
             }
             Tanda Tangan    & \textbf{Diperiksa}                &                                  &                                  & \textbf{Disetujui} \\
                             &                                   &                                  &                                  & \\
@@ -126,38 +131,60 @@
         \end{tblr}
     \end{table}
 
-    \section*{BENTUK PERUBAHAN:}
+    \hspace{-1em}\textbf{BENTUK PERUBAHAN:}
+    \vspace{5em} % Baris ini bisa dihapus saja bila sudah ada konten-nya.
+    \texttt{}
+    \begin{picture}(0,0)
+        \put(-123,-45){\noindent\rule{17.25cm}{0.35pt}} % 17.25cm wide and 0.35pt thick
+    \end{picture}
+
+    \hspace{-1em}\textbf{ALASAN PERUBAHAN:}
+    \vspace{5em} % Baris ini bisa dihapus saja bila sudah ada konten-nya.
+    \texttt{}
+    \begin{picture}(0,0)
+        \put(-122,-45){\noindent\rule{17.25cm}{0.35pt}} % 17.25cm wide and 0.35pt thick
+    \end{picture}
+
+    \hspace{-1em}\textbf{TINDAKAN SEMASA PERALIHAN:}
     \vspace{5em} % Baris ini bisa dihapus saja bila sudah ada konten-nya.
 
-    \section*{ALASAN PERUBAHAN:}
-    \vspace{5em} % Baris ini bisa dihapus saja bila sudah ada konten-nya.
+    \hspace{-1em}\textbf{DISTRIBUSI:}
+    \begin{picture}(0,0)
+        \put(-70,12){\noindent\rule{17.25cm}{0.35pt}} % 17.25cm wide and 0.35pt thick
+    \end{picture}
+    \begin{picture}(0,0)
+        \put(-73,-5){\noindent\rule{17.25cm}{0.35pt}} % 17.25cm wide and 0.35pt thick
+    \end{picture}
+    \begin{picture}(0,0)
+        \put(-75,-55){\noindent\rule{17.25cm}{0.35pt}} % 17.25cm wide and 0.35pt thick
+    \end{picture}
+    \begin{picture}(0,0)
+        \put(170,-55){\tikz \draw[dotted] (0,0) -- (0,1.7);} % Draw a dotted vertical line
+    \end{picture}
 
-    \section*{TINDAKAN SEMASA PERALIHAN:}
-    \vspace{5em} % Baris ini bisa dihapus saja bila sudah ada konten-nya.
-
-    \section*{DISTRIBUSI:}
-
-    \begin{longtable}{|c|p{1.5cm}|p{3.6cm}|c|p{1.5cm}|p{3.6cm}|}
-        \hline
-        \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\ \hline
+    \begin{longtable}{c p{1.5cm} p{4.23cm} c p{1.5cm} p{4.23cm}}
+        %\hline
+        \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\%\hline
         \endfirsthead
         \multicolumn{6}{c}%
         {{\bfseries Lanjutan dari tabel Distribusi halaman sebelumnya}} \\
-        \hline
-        \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\ \hline
+        %\hline
+        \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} & \textbf{SALINAN} & \textbf{BAGIAN} & \textbf{KETERANGAN} \\%\hline
         \endhead
-        \hline \multicolumn{6}{|r|}{{Bersambung pada halaman berikut-nya}} \\ \hline
+        \hline \multicolumn{6}{|r|}{{Bersambung pada halaman berikut-nya}} \\%\hline
         \endfoot
-        \hline
+        %\hline
         \endlastfoot
-        \#11 & MIS & Management Information System & & & \\ \hline
+        \tiny & & & & & \\
+        \#11 & MIS & Management Information System & & & \\%\hline
     \end{longtable}
 
     \newpage
 
-    \section*{SEJARAH PERUBAHAN}
+    \center\textbf{SEJARAH PERUBAHAN}
 
-    \begin{longtable}{|c|c|r p{11.4cm}|}
+    \renewcommand{\arraystretch}{1.2} % Adjust this value as needed
+    \begin{longtable}{|c|c|r p{12.5cm}|}
         % Bila setelah ada penambahan konten sejarah perubahan, kemungkinan lebar tabel ini akan berubah.
         % Ubah ukuran kolom terakhir agar lebarnya sama dengan lebar heading SOP, misalnya dari 11.4cm
         % menjadi 10.5cm.
@@ -173,7 +200,7 @@
         \endfoot
         \hline
         \endlastfoot
-        &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline
+        &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline &&&\\\hline
         % NOTE:
         % Setiap ada menambahkan baris baru, cek kembali pada file pdf yang
         % dihasilkan pada halaman SEJARAH PERUBAHAN untuk memastikan longtable tidak
@@ -184,46 +211,48 @@
 
     \newpage
 
-    \section{TUJUAN}
-
-    \section{RUANG LINGKUP}
     \begin{enumerate}
-        \item ...
-        \item ...
+        \item \textbf{TUJUAN}
+
+        \item \textbf{RUANG LINGKUP}
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+
+        \item \textbf{RUJUKAN}
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+
+        \item \textbf{DEFINISI}
+            \begin{longtable}{p{8pt} r p{3cm} c p{10.98cm}}
+                & 4.1. & \textit{...} & : & ...\\
+                & 4.2. & \textit{...} & : & ...\\
+                & 4.3. & \textit{...} & : & ...\\
+            \end{longtable}
+
+        \item \textbf{TANGGUNG JAWAB}
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+
+        \item \textbf{PERSIAPAN}
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+
+        \item \textbf{PROSEDUR KERJA}
+            \begin{enumerate}
+                \item ...
+                \item ...
+            \end{enumerate}
+
+        \item \textbf{PENGECUALIAN}
+        \item \textbf{REKAMAN MUTU}
+        \item \textbf{LAMPIRAN}
     \end{enumerate}
-
-    \section{RUJUKAN}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{DEFINISI}
-    \begin{longtable}{r p{2cm} c p{12.7cm}}
-        4.1. & \textbf{...} & : & ...\\
-        4.2. & \textbf{...} & : & ...\\
-        4.3. & \textbf{...} & : & ...\\
-    \end{longtable}
-
-    \section{TANGGUNG JAWAB}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{PERSIAPAN}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{PROSEDUR KERJA}
-    \begin{enumerate}
-        \item ...
-        \item ...
-    \end{enumerate}
-
-    \section{PENGECUALIAN}
-    \section{REKAMAN MUTU}
-    \section{LAMPIRAN}
 \end{document}
