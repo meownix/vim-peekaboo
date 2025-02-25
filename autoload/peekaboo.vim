@@ -60,24 +60,26 @@ function! peekaboo#GenerateMOMFilename()
         if expand("%:f") == "gpgIndex.wiki"
             let thePath = expand("%:p:h") . "/../gpg"
             let thePrefix = thePath[-7:]
+            let theExt = ".asc"
         else
             let thePath = expand("%:p:h")
             let thePrefix = thePath[-4:]
+            let theExt = ""
         endif
+        let theCounter = 1
+        let theFilename = strftime("%Y/%m/%d") . ".1." . expand("$USER") . theExt
+        "echom expand("%:h") . "/" . theFilename . ".wiki"
+        while filereadable(thePath .  "/" . theFilename . ".wiki")
+            let theCounter = theCounter + 1
+            let theFilename = strftime("%Y/%m/%d") . "." . string(theCounter) . "." . expand("$USER") . theExt
+        endwhile
+        return thePrefix . "/" . theFilename
     else
         echohl WarningMsg
         echo "Generate MWiki's fullpath only works for MOM, SRS, Tex, GPG & SOP/I Wiki Index files."
         echohl None
         return ""
     endif
-    let theCounter = 1
-    let theFilename = strftime("%Y/%m/%d") . ".1." . expand("$USER")
-    "echom expand("%:h") . "/" . theFilename . ".wiki"
-    while filereadable(thePath .  "/" . theFilename . ".wiki")
-        let theCounter = theCounter + 1
-        let theFilename = strftime("%Y/%m/%d") . "." . string(theCounter) . "." . expand("$USER")
-    endwhile
-    return thePrefix . "/" . theFilename
 endfunction
 
 "Automatically generate the standardized path and naming convention for the
