@@ -56,14 +56,19 @@ function! peekaboo#GenerateMOMFilename()
                 \ expand("%:p")[-19:] == "/doc/srs/index.wiki" ||
                 \ expand("%:p")[-19:] == "/doc/std/index.wiki" ||
                 \ expand("%:p")[-19:] == "/doc/tex/index.wiki" ||
-                \ expand("%:p")[-18:] == "/doc/gpgIndex.wiki"
+                \ expand("%:p")[-18:] == "/doc/gpgIndex.wiki" ||
+                \ expand("%:p")[-21:] == "/doc/linux/index.wiki"
         if expand("%:f") == "gpgIndex.wiki"
             let thePath = expand("%:p:h") . "/../gpg"
             let thePrefix = thePath[-7:]
             let theExt = ".asc"
         else
             let thePath = expand("%:p:h")
-            let thePrefix = thePath[-4:]
+            if expand("%:p:h") =~ ".*\/doc\/linux$"
+                let thePrefix = thePath[-6:]
+            else
+                let thePrefix = thePath[-4:]
+            endif
             let theExt = ""
         endif
         let theCounter = 1
